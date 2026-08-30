@@ -24,35 +24,38 @@
 
         .nova-nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); }
         .nav-inner { max-width: 1400px; margin: auto; height: 70px; padding: 0 30px; display: flex; align-items: center; justify-content: space-between; }
-        .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 20px; color: #fff; text-decoration: none; }
+        .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 18px; color: #fff; text-decoration: none; }
         .brand img { width: 32px; border-radius: 6px; }
 
-        main { max-width: 1400px; margin: auto; padding: 40px 30px; }
+        .btn-login-nav, .btn-logout { background: var(--primary); color: #fff; font-weight: 800; border: none; cursor: pointer; padding: 8px 18px; border-radius: 10px; font-size: 12px; }
+        .btn-logout { background: #222; }
 
+        main { max-width: 1400px; margin: auto; padding: 40px 30px; }
         .header { text-align: center; margin-bottom: 50px; }
         .header h1 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 10px; }
         .update-tag { display: inline-block; padding: 6px 15px; background: rgba(255,255,255,0.05); border-radius: 30px; font-size: 12px; font-weight: 700; color: #aaa; }
 
-        .controls { display: flex; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
-        .search { flex: 1; min-width: 300px; position: relative; }
-        .search input { width: 100%; padding: 15px 20px 15px 45px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; color: #fff; font-size: 15px; }
-        .search::before { content: "\f002"; font-family: "Font Awesome 5 Free"; font-weight: 900; position: absolute; left: 18px; top: 50%; transform: translateY(-50%); opacity: 0.4; }
-
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 25px; transition: 0.3s; position: relative; overflow: hidden; }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 25px; transition: 0.3s; position: relative; }
         .card:hover { transform: translateY(-5px); border-color: var(--primary); }
 
         .status-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; }
-        .ONLINE .status-dot, .PROTECTED .status-dot { background: var(--success); box-shadow: 0 0 10px var(--success); }
+        .ONLINE .status-dot, .PROTECTED .status-dot, .MANUAL_ONLINE .status-dot { background: var(--success); box-shadow: 0 0 10px var(--success); }
         .OFFLINE .status-dot { background: var(--error); }
-        .REDIRECT .status-dot { background: var(--warning); }
 
         .channel-name { font-size: 18px; font-weight: 800; margin-bottom: 5px; }
         .category-tag { font-size: 10px; font-weight: 900; text-transform: uppercase; opacity: 0.4; letter-spacing: 1px; }
+        .latency { font-size: 11px; font-weight: 700; color: #888; margin-top: 15px; display: flex; align-items: center; justify-content: space-between; }
 
-        .latency { font-size: 11px; font-weight: 700; color: #888; margin-top: 15px; display: flex; align-items: center; gap: 5px; }
+        .btn-manual { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; font-size: 9px; font-weight: 800; padding: 4px 8px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        .btn-manual:hover { background: var(--primary); border-color: var(--primary); }
 
-        .hidden { display: none; }
+        /* Auth View */
+        #auth-view { position: fixed; inset: 0; background: var(--bg); z-index: 10001; display: none; justify-content: center; align-items: center; }
+        .auth-card { width: 400px; padding: 50px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 35px; text-align: center; }
+        .auth-card input { width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff; margin-bottom: 15px; }
+
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
@@ -63,8 +66,22 @@
             <img src="https://raw.githubusercontent.com/novaplaytv/novaimg/main/novasplash.webp">
             Novaplay | Verificador de Señal
         </a>
+        <div id="auth-controls">
+            <button class="btn-login-nav" id="btnLogin" onclick="mostrarLogin()">ADMIN</button>
+            <button class="btn-logout hidden" id="btnLogout" onclick="cerrarSesion()">SALIR</button>
+        </div>
     </div>
 </nav>
+
+<div id="auth-view">
+    <div class="auth-card">
+        <h2 style="margin-bottom:30px; font-weight:900;">Acceso Staff</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button class="btn-login-nav" style="width:100%; padding:15px;" onclick="iniciarSesion()">INGRESAR</button>
+        <button class="btn-manual" style="margin-top:15px;" onclick="document.getElementById('auth-view').style.display='none'">CANCELAR</button>
+    </div>
+</div>
 
 <main>
     <div class="header">
@@ -72,79 +89,103 @@
         <div class="update-tag" id="lastUpdate">Sincronizando estado...</div>
     </div>
 
-    <div class="controls">
-        <div class="search">
-            <input type="text" id="searchInput" placeholder="Buscar canal o categoría..." oninput="filter()">
-        </div>
-    </div>
-
-    <div class="grid" id="mainGrid">
-        <!-- Generado dinámicamente -->
-    </div>
+    <div class="grid" id="mainGrid"></div>
 </main>
 
 <script>
+    const API_URL = "https://mrghnngupolsgatcmevw.supabase.co/functions/v1/actualizar-canales";
+    let sessionToken = localStorage.getItem("novaplay_session_token") || "";
     let allSignals = [];
+    let manualOverrides = {};
 
-    async function loadStatus() {
-        try {
-            const res = await fetch('status.json?t=' + Date.now());
-            const data = await res.json();
-            allSignals = data.results;
-            document.getElementById('lastUpdate').innerText = "Última Verificación: " + data.last_update;
-            render(allSignals);
-        } catch (e) {
-            document.getElementById('mainGrid').innerHTML = "<p style='text-align:center; width:100%; opacity:0.5;'>Esperando a que el bot genere el primer reporte...</p>";
-        }
+    async function req(body) {
+        const h = { "Content-Type": "application/json" };
+        if (sessionToken) h.Authorization = "Bearer " + sessionToken;
+        const r = await fetch(API_URL, { method: "POST", headers: h, body: JSON.stringify(body) });
+        return r.json();
     }
 
-    function render(list) {
+    async function loadData() {
+        try {
+            const [statusRes, manualRes] = await Promise.all([
+                fetch('status.json?t=' + Date.now()).then(r => r.json()),
+                fetch('manual_overrides.json?t=' + Date.now()).then(r => r.json())
+            ]);
+            allSignals = statusRes.results;
+            manualOverrides = manualRes;
+            document.getElementById('lastUpdate').innerText = "Última Verificación: " + statusRes.last_update;
+            render();
+        } catch (e) { console.error(e); }
+    }
+
+    function render() {
         const grid = document.getElementById('mainGrid');
-        grid.innerHTML = list.map(s => {
-            let displayStatus = s.status;
+        const isAdmin = sessionToken !== "";
+
+        grid.innerHTML = allSignals.map(s => {
+            let statusText = s.status;
             let displayColor = (s.status === 'OFFLINE' || s.status === 'ERROR') ? 'var(--error)' : 'var(--success)';
-            let extraInfo = s.code !== 200 && s.code !== 0 ? `(HTTP ${s.code})` : '';
 
-            if (s.status === 'PROTECTED') {
-                displayStatus = 'ONLINE <small>(Codificado)</small>';
-            }
+            if (s.status === 'PROTECTED') statusText = 'ONLINE <small>(Codificado)</small>';
+            if (s.status === 'MANUAL_ONLINE') statusText = 'Verificado Manualmente';
 
-            // Caso Especial: NovaSports 404
-            if (s.name.toUpperCase().includes("NOVASPORTS") && s.code === 404) {
-                displayStatus = 'OFFLINE <small>(Sin Evento Disponible)</small>';
-                extraInfo = '';
-            }
+            const showManualBtn = isAdmin && (s.status === 'OFFLINE' || s.status === 'ERROR' || s.status === 'PROTECTED');
+            const showResetBtn = isAdmin && s.status === 'MANUAL_ONLINE';
 
             return `
                 <div class="card ${s.status}">
                     <div class="category-tag">${s.category}</div>
                     <div class="channel-name">${s.name}</div>
-                    <div class="status-info">
-                        <span class="status-dot"></span>
-                        <span style="font-size: 13px; font-weight: 800; color: ${displayColor}">
-                            ${displayStatus} ${extraInfo}
-                        </span>
+                    <div style="font-size: 13px; font-weight: 800; color: ${displayColor}">
+                        <span class="status-dot"></span>${statusText}
                     </div>
                     <div class="latency">
-                        <i class="fas fa-bolt"></i> Latencia: ${s.latency}
+                        <span><i class="fas fa-bolt"></i> ${s.latency}</span>
+                        ${showManualBtn ? `<button class="btn-manual" onclick="setManual('${s.id}', true)">FORZAR ONLINE</button>` : ''}
+                        ${showResetBtn ? `<button class="btn-manual" onclick="setManual('${s.id}', false)">QUITAR FORZADO</button>` : ''}
                     </div>
                 </div>
             `;
         }).join('');
+
+        document.getElementById('btnLogin').classList.toggle('hidden', isAdmin);
+        document.getElementById('btnLogout').classList.toggle('hidden', !isAdmin);
     }
 
-    function filter() {
-        const query = document.getElementById('searchInput').value.toLowerCase();
-        const filtered = allSignals.filter(s =>
-            s.name.toLowerCase().includes(query) ||
-            s.category.toLowerCase().includes(query)
-        );
-        render(filtered);
+    async function setManual(id, status) {
+        if (!confirm(status ? "¿Marcar este canal como ONLINE manualmente?" : "¿Restablecer verificación automática?")) return;
+
+        // El script de Supabase debe ser capaz de editar manual_overrides.json
+        // Usamos una acción especial que programaremos en la Edge Function
+        const res = await req({
+            action: "seguridad_set_manual_signal",
+            canal_id: id,
+            manual_online: status,
+            repo: "SignalVerificador"
+        });
+
+        if (res.success) {
+            alert("Cambio guardado. El bot respetará esta decisión en el próximo ciclo.");
+            location.reload();
+        } else {
+            alert("Error al guardar: " + (res.error || "Sesión expirada"));
+        }
     }
 
-    loadStatus();
-    setInterval(loadStatus, 60000); // Auto-refresco cada minuto
+    function mostrarLogin() { document.getElementById('auth-view').style.display = 'flex'; }
+    async function iniciarSesion() {
+        const u = document.getElementById("username").value;
+        const p = document.getElementById("password").value;
+        const res = await req({ action: "login", username: u, password: p });
+        if (res.token) {
+            sessionToken = res.token;
+            localStorage.setItem("novaplay_session_token", res.token);
+            location.reload();
+        } else { alert("Acceso denegado"); }
+    }
+    function cerrarSesion() { localStorage.removeItem("novaplay_session_token"); location.reload(); }
+
+    loadData();
 </script>
-
 </body>
 </html>
