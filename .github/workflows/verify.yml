@@ -1,0 +1,37 @@
+name: Monitor de Señales NovaPlay
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Se ejecuta cada hora automáticamente
+  workflow_dispatch:   # Permite ejecución manual con un botón
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install requests
+
+      - name: Ejecutar Verificación
+        env:
+          JSON_SOURCE_URL: ${{ secrets.JSON_SOURCE_URL }}
+        run: python verify.py
+
+      - name: Publicar Resultados
+        run: |
+          git config --global user.name "NovaPlay Monitor"
+          git config --global user.email "monitor@novaplay.tv"
+          git add status.json
+          git commit -m "System: Actualización de estado de señales [$(date '+%Y-%m-%d %H:%M')]" || exit 0
+          git push
