@@ -52,12 +52,21 @@ def main():
     source_url = os.getenv("JSON_SOURCE_URL")
     if not source_url: return
 
-    # Cargar Overrides Manuales (si existe el archivo)
+    # 1. Cargar Overrides Manuales
     overrides = {}
     if os.path.exists("manual_overrides.json"):
         try:
             with open("manual_overrides.json", "r", encoding="utf-8") as f:
                 overrides = json.load(f)
+        except Exception as e:
+            print(f"Error cargando manual_overrides.json: {e}")
+
+    # 2. Cargar status.json previo para no borrarlo si falla algo
+    old_report = {"last_update": "N/A", "results": []}
+    if os.path.exists("status.json"):
+        try:
+            with open("status.json", "r", encoding="utf-8") as f:
+                old_report = json.load(f)
         except: pass
 
     flow_token = get_flow_token()
@@ -78,17 +87,17 @@ def main():
                 canal_id = str(item.get('canal'))
                 if not url: continue
 
-                # --- LÓGICA DE PRIORIDAD MANUAL ---
+                # --- PRIORIDAD MANUAL ---
                 if canal_id in overrides and overrides[canal_id].get("manual_online") is True:
                     report["results"].append({
                         "id": canal_id,
                         "name": item.get('name'),
                         "category": cat_name,
                         "status": "MANUAL_ONLINE",
-                        "latency": "Manual",
+                        "latency": "Verificado Manualmente",
                         "code": 200
                     })
-                    print(f"[{cat_name}] {item.get('name')}... ONLINE (MANUAL)")
+                    print(f"[{cat_name}] {item.get('name')}... MANUAL ONLINE")
                     continue
 
                 is_flow = item.get('flow') == "yes" or "flow" in url.lower()
@@ -99,7 +108,7 @@ def main():
                 }
 
                 res = check_signal(item.get('name'), url, headers, is_flow, flow_token)
-                print(f"[{cat_name}] {item.get('name')}... {res['status']}")
+                print(f"[{cat_name}] {item.get('name')}... {res['status']} ({res.get('code', 'ERR')})")
 
                 report["results"].append({
                     "id": canal_id,
@@ -112,8 +121,12 @@ def main():
 
         with open("status.json", "w", encoding="utf-8") as f:
             json.dump(report, f, indent=4)
+        print("\n✔ Verificaciín completada con íxito.")
 
-    except Exception as e: print(f"Fallo crítico: {e}")
+    except Exception as e:
+        print(f"Fallo crético en escaneo: {e}. Preservando reporte anterior.")
+        with open("status.json", "w", encoding="utf-8") as f:
+            json.dump(old_report, f, indent=4)
 
 if __name__ == "__main__":
     main()

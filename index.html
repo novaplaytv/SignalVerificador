@@ -41,7 +41,7 @@
 
         .status-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; }
         .ONLINE .status-dot, .PROTECTED .status-dot, .MANUAL_ONLINE .status-dot { background: var(--success); box-shadow: 0 0 10px var(--success); }
-        .OFFLINE .status-dot { background: var(--error); }
+        .OFFLINE .status-dot, .ERROR .status-dot { background: var(--error); }
 
         .channel-name { font-size: 18px; font-weight: 800; margin-bottom: 5px; }
         .category-tag { font-size: 10px; font-weight: 900; text-transform: uppercase; opacity: 0.4; letter-spacing: 1px; }
@@ -50,26 +50,20 @@
         .btn-manual { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; font-size: 9px; font-weight: 800; padding: 4px 8px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
         .btn-manual:hover { background: var(--primary); border-color: var(--primary); }
 
-        /* Auth View */
-        #auth-view { position: fixed; inset: 0; background: var(--bg); z-index: 10001; display: none; justify-content: center; align-items: center; }
-        .auth-card { width: 400px; padding: 50px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 35px; text-align: center; }
-        .auth-card input { width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff; margin-bottom: 15px; }
-
-        .hidden { display: none !important; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
-
         /* NovaModal Premium */
         .nova-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 20000; display: none; align-items: center; justify-content: center; padding: 20px; }
         .nova-modal { background: var(--card-bg); border: 1px solid var(--border); border-radius: 30px; width: 100%; max-width: 450px; padding: 40px; box-shadow: 0 25px 60px rgba(0,0,0,0.6); text-align: center; animation: modal-in 0.3s ease-out; }
         @keyframes modal-in { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         .nova-modal h3 { font-size: 22px; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; }
         .nova-modal p { color: var(--text-muted); font-size: 15px; margin-bottom: 25px; line-height: 1.5; }
+        .nova-modal input { width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; color: #fff; margin-bottom: 20px; font-size: 15px; }
         .nova-modal-btns { display: flex; gap: 12px; }
         .nova-modal-btn { flex: 1; padding: 15px; border-radius: 14px; border: 0; font-weight: 800; cursor: pointer; transition: 0.2s; }
         .btn-confirm { background: var(--primary); color: #fff; }
         .btn-cancel { background: #222; color: #fff; }
         .nova-modal-btn:hover { transform: scale(1.03); }
+
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
@@ -87,6 +81,7 @@
     </div>
 </nav>
 
+<!-- Modales Premium -->
 <div class="nova-modal-overlay" id="novaModal">
     <div class="nova-modal">
         <h3 id="modalTitle">Confirmar</h3>
@@ -99,8 +94,8 @@
 </div>
 
 <div id="auth-view" class="nova-modal-overlay">
-    <div class="auth-card">
-        <h2 style="margin-bottom:30px; font-weight:900; font-size: 28px;">Acceso Staff</h2>
+    <div class="auth-card nova-modal">
+        <h3 style="margin-bottom:25px;">Acceso Staff</h3>
         <div style="text-align: left; margin-bottom: 20px;">
             <label style="display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase;">Usuario</label>
             <input type="text" id="username" placeholder="Usuario Staff" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
@@ -109,8 +104,8 @@
             <label style="display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase;">Contraseña</label>
             <input type="password" id="password" placeholder="Contraseña" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
         </div>
-        <button class="btn-login-nav" style="width:100%; padding:18px; border-radius: 14px; font-size: 14px;" onclick="iniciarSesion()">ENTRAR AL PANEL</button>
-        <button class="btn-manual" style="margin-top:15px;" onclick="document.getElementById('auth-view').style.display='none'">CANCELAR</button>
+        <button class="nova-modal-btn btn-confirm" style="width:100%;" onclick="iniciarSesion()">ENTRAR AL PANEL</button>
+        <button class="btn-manual" style="margin-top:15px; width: 100%;" onclick="document.getElementById('auth-view').style.display='none'">CANCELAR</button>
     </div>
 </div>
 
@@ -119,7 +114,6 @@
         <h1>Búnker de Monitoreo</h1>
         <div class="update-tag" id="lastUpdate">Sincronizando estado...</div>
     </div>
-
     <div class="grid" id="mainGrid"></div>
 </main>
 
@@ -127,7 +121,6 @@
     const API_URL = "https://mrghnngupolsgatcmevw.supabase.co/functions/v1/actualizar-canales";
     let sessionToken = localStorage.getItem("novaplay_session_token") || "";
     let allSignals = [];
-    let manualOverrides = {};
 
     async function req(body) {
         const h = { "Content-Type": "application/json" };
@@ -136,17 +129,24 @@
         return r.json();
     }
 
+    function openModal(title, msg, onConfirm) {
+        const m = document.getElementById("novaModal");
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalMessage").innerText = msg;
+        m.style.display = "flex";
+        document.getElementById("modalCancel").onclick = () => m.style.display = "none";
+        document.getElementById("modalConfirm").onclick = () => { onConfirm(); m.style.display = "none"; };
+    }
+
     async function loadData() {
         try {
-            const [statusRes, manualRes] = await Promise.all([
-                fetch('status.json?t=' + Date.now()).then(r => r.json()),
-                fetch('manual_overrides.json?t=' + Date.now()).then(r => r.json())
-            ]);
-            allSignals = statusRes.results;
-            manualOverrides = manualRes;
-            document.getElementById('lastUpdate').innerText = "Última Verificación: " + statusRes.last_update;
+            const res = await fetch('status.json?t=' + Date.now()).then(r => r.json());
+            allSignals = res.results;
+            document.getElementById('lastUpdate').innerText = "Última Verificación: " + res.last_update;
             render();
-        } catch (e) { console.error(e); }
+        } catch (e) {
+            document.getElementById('mainGrid').innerHTML = "<p style='text-align:center; width:100%; opacity:0.5;'>Iniciando primer reporte...</p>";
+        }
     }
 
     function render() {
@@ -157,8 +157,20 @@
             let statusText = s.status;
             let displayColor = (s.status === 'OFFLINE' || s.status === 'ERROR') ? 'var(--error)' : 'var(--success)';
 
-            if (s.status === 'PROTECTED') statusText = 'ONLINE <small>(Codificado)</small>';
-            if (s.status === 'MANUAL_ONLINE') statusText = 'Verificado Manualmente';
+            if (s.status === 'PROTECTED') {
+                statusText = 'ONLINE <small>(Codificado)</small>';
+                displayColor = 'var(--success)';
+            }
+            if (s.status === 'MANUAL_ONLINE') {
+                statusText = 'Verificado Manualmente';
+                displayColor = 'var(--success)';
+            }
+
+            // Caso Especial: NovaSports 404
+            if (s.name.toUpperCase().includes("NOVASPORTS") && s.code === 404) {
+                statusText = 'OFFLINE <small>(Sin Evento)</small>';
+                displayColor = 'var(--error)';
+            }
 
             const showManualBtn = isAdmin && (s.status === 'OFFLINE' || s.status === 'ERROR' || s.status === 'PROTECTED');
             const showResetBtn = isAdmin && s.status === 'MANUAL_ONLINE';
@@ -181,15 +193,6 @@
 
         document.getElementById('btnLogin').classList.toggle('hidden', isAdmin);
         document.getElementById('btnLogout').classList.toggle('hidden', !isAdmin);
-    }
-
-    function openModal(title, msg, onConfirm) {
-        const m = document.getElementById("novaModal");
-        document.getElementById("modalTitle").innerText = title;
-        document.getElementById("modalMessage").innerText = msg;
-        m.style.display = "flex";
-        document.getElementById("modalCancel").onclick = () => m.style.display = "none";
-        document.getElementById("modalConfirm").onclick = () => { onConfirm(); m.style.display = "none"; };
     }
 
     async function setManual(id, status) {

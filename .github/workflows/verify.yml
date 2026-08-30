@@ -2,8 +2,8 @@ name: Monitor de Señales NovaPlay
 
 on:
   schedule:
-    - cron: '0 * * * *' # Se ejecuta cada hora automáticamente
-  workflow_dispatch:   # Permite ejecución manual con un botón
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   monitor:
@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Clonar historial completo para evitar errores de push
 
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -26,12 +28,14 @@ jobs:
       - name: Ejecutar Verificación
         env:
           JSON_SOURCE_URL: ${{ secrets.JSON_SOURCE_URL }}
+          TOKEN_API_URL: ${{ secrets.TOKEN_API_URL }}
         run: python verify.py
 
       - name: Publicar Resultados
         run: |
           git config --global user.name "NovaPlay Monitor"
           git config --global user.email "monitor@novaplay.tv"
-          git add status.json
-          git commit -m "System: Actualización de estado de señales [$(date '+%Y-%m-%d %H:%M')]" || exit 0
-          git push
+          git pull origin main --rebase # Asegurar que no borramos cambios manuales hechos desde la web
+          git add status.json manual_overrides.json
+          git commit -m "System: Actualización automática de señales [$(date '+%Y-%m-%d %H:%M')]" || exit 0
+          git push origin main
