@@ -56,6 +56,20 @@
         .auth-card input { width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff; margin-bottom: 15px; }
 
         .hidden { display: none !important; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+        /* NovaModal Premium */
+        .nova-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 20000; display: none; align-items: center; justify-content: center; padding: 20px; }
+        .nova-modal { background: var(--card-bg); border: 1px solid var(--border); border-radius: 30px; width: 100%; max-width: 450px; padding: 40px; box-shadow: 0 25px 60px rgba(0,0,0,0.6); text-align: center; animation: modal-in 0.3s ease-out; }
+        @keyframes modal-in { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .nova-modal h3 { font-size: 22px; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; }
+        .nova-modal p { color: var(--text-muted); font-size: 15px; margin-bottom: 25px; line-height: 1.5; }
+        .nova-modal-btns { display: flex; gap: 12px; }
+        .nova-modal-btn { flex: 1; padding: 15px; border-radius: 14px; border: 0; font-weight: 800; cursor: pointer; transition: 0.2s; }
+        .btn-confirm { background: var(--primary); color: #fff; }
+        .btn-cancel { background: #222; color: #fff; }
+        .nova-modal-btn:hover { transform: scale(1.03); }
     </style>
 </head>
 <body>
@@ -73,12 +87,29 @@
     </div>
 </nav>
 
-<div id="auth-view">
+<div class="nova-modal-overlay" id="novaModal">
+    <div class="nova-modal">
+        <h3 id="modalTitle">Confirmar</h3>
+        <p id="modalMessage">¿Deseas realizar esta acción?</p>
+        <div class="nova-modal-btns">
+            <button class="nova-modal-btn btn-cancel" id="modalCancel">CANCELAR</button>
+            <button class="nova-modal-btn btn-confirm" id="modalConfirm">ACEPTAR</button>
+        </div>
+    </div>
+</div>
+
+<div id="auth-view" class="nova-modal-overlay">
     <div class="auth-card">
-        <h2 style="margin-bottom:30px; font-weight:900;">Acceso Staff</h2>
-        <input type="text" id="username" placeholder="Usuario">
-        <input type="password" id="password" placeholder="Contraseña">
-        <button class="btn-login-nav" style="width:100%; padding:15px;" onclick="iniciarSesion()">INGRESAR</button>
+        <h2 style="margin-bottom:30px; font-weight:900; font-size: 28px;">Acceso Staff</h2>
+        <div style="text-align: left; margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase;">Usuario</label>
+            <input type="text" id="username" placeholder="Usuario Staff" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
+        </div>
+        <div style="text-align: left; margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase;">Contraseña</label>
+            <input type="password" id="password" placeholder="Contraseña" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
+        </div>
+        <button class="btn-login-nav" style="width:100%; padding:18px; border-radius: 14px; font-size: 14px;" onclick="iniciarSesion()">ENTRAR AL PANEL</button>
         <button class="btn-manual" style="margin-top:15px;" onclick="document.getElementById('auth-view').style.display='none'">CANCELAR</button>
     </div>
 </div>
@@ -152,24 +183,34 @@
         document.getElementById('btnLogout').classList.toggle('hidden', !isAdmin);
     }
 
+    function openModal(title, msg, onConfirm) {
+        const m = document.getElementById("novaModal");
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalMessage").innerText = msg;
+        m.style.display = "flex";
+        document.getElementById("modalCancel").onclick = () => m.style.display = "none";
+        document.getElementById("modalConfirm").onclick = () => { onConfirm(); m.style.display = "none"; };
+    }
+
     async function setManual(id, status) {
-        if (!confirm(status ? "¿Marcar este canal como ONLINE manualmente?" : "¿Restablecer verificación automática?")) return;
+        openModal(
+            status ? "Forzar Online" : "Quitar Forzado",
+            status ? "¿Marcar este canal como ONLINE manualmente?" : "¿Restablecer verificación automática?",
+            async () => {
+                const res = await req({
+                    action: "seguridad_set_manual_signal",
+                    canal_id: id,
+                    manual_online: status,
+                    repo: "SignalVerificador"
+                });
 
-        // El script de Supabase debe ser capaz de editar manual_overrides.json
-        // Usamos una acción especial que programaremos en la Edge Function
-        const res = await req({
-            action: "seguridad_set_manual_signal",
-            canal_id: id,
-            manual_online: status,
-            repo: "SignalVerificador"
-        });
-
-        if (res.success) {
-            alert("Cambio guardado. El bot respetará esta decisión en el próximo ciclo.");
-            location.reload();
-        } else {
-            alert("Error al guardar: " + (res.error || "Sesión expirada"));
-        }
+                if (res.success) {
+                    location.reload();
+                } else {
+                    openModal("Error", "Fallo al guardar: " + (res.error || "Acción no permitida"), () => {});
+                }
+            }
+        );
     }
 
     function mostrarLogin() { document.getElementById('auth-view').style.display = 'flex'; }
@@ -181,7 +222,7 @@
             sessionToken = res.token;
             localStorage.setItem("novaplay_session_token", res.token);
             location.reload();
-        } else { alert("Acceso denegado"); }
+        } else { openModal("Error", "Acceso denegado", () => {}); }
     }
     function cerrarSesion() { localStorage.removeItem("novaplay_session_token"); location.reload(); }
 
