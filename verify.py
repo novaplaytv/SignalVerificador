@@ -43,8 +43,8 @@ def check_signal(name, url, headers, is_flow=False, token=None):
 
         # 3. Petición de verificación
         start_time = time.time()
-        # Usamos GET con stream para leer solo el principio y no saturar
-        response = requests.get(test_url, headers=test_headers, timeout=15, stream=True, verify=False)
+        # Timeout extendido a 30s para redes lentas
+        response = requests.get(test_url, headers=test_headers, timeout=30, stream=True, verify=False)
         elapsed = time.time() - start_time
 
         # 4. Validar contenido real (Peek de 2KB para DASH)

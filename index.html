@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVAPLAY | Monitor de Señales</title>
+    <title>Verificador de Señal</title>
     <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/novaplaytv/novaimg/main/novasplash.webp">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
         .card:hover { transform: translateY(-5px); border-color: var(--primary); }
 
         .status-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; }
-        .ONLINE .status-dot { background: var(--success); box-shadow: 0 0 10px var(--success); }
+        .ONLINE .status-dot, .PROTECTED .status-dot { background: var(--success); box-shadow: 0 0 10px var(--success); }
         .OFFLINE .status-dot { background: var(--error); }
         .REDIRECT .status-dot { background: var(--warning); }
 
@@ -59,9 +59,9 @@
 
 <nav class="nova-nav">
     <div class="nav-inner">
-        <a href="#" class="brand">
+        <a href="https://novaplaytv.github.io/Dashboard/" class="brand">
             <img src="https://raw.githubusercontent.com/novaplaytv/novaimg/main/novasplash.webp">
-            NOVAPLAY | SIGNAL WATCHDOG
+            SignalVerificator
         </a>
     </div>
 </nav>
@@ -106,8 +106,8 @@
                 <div class="channel-name">${s.name}</div>
                 <div class="status-info">
                     <span class="status-dot"></span>
-                    <span style="font-size: 13px; font-weight: 800; color: ${s.status === 'ONLINE' ? 'var(--success)' : 'var(--error)'}">
-                        ${s.status} ${s.code !== 200 ? '(HTTP ' + s.code + ')' : ''}
+                    <span style="font-size: 13px; font-weight: 800; color: ${s.status === 'OFFLINE' ? 'var(--error)' : 'var(--success)'}">
+                        ${s.status === 'PROTECTED' ? 'ONLINE <small>(Codificado)</small>' : s.status} ${s.code !== 200 && s.code !== 0 ? '(HTTP ' + s.code + ')' : ''}
                     </span>
                 </div>
                 <div class="latency">
