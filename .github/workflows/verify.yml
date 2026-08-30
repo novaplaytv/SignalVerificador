@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --global user.name "NovaPlay Monitor"
           git config --global user.email "monitor@novaplay.tv"
-          git pull origin main --rebase # Asegurar que no borramos cambios manuales hechos desde la web
           git add status.json manual_overrides.json
+          git pull origin main --rebase --autostash
           git commit -m "System: Actualización automática de señales [$(date '+%Y-%m-%d %H:%M')]" || exit 0
           git push origin main
