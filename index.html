@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Señal</title>
+    <title>Novaplay | Verificador de Señal</title>
     <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/novaplaytv/novaimg/main/novasplash.webp">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -100,21 +100,37 @@
 
     function render(list) {
         const grid = document.getElementById('mainGrid');
-        grid.innerHTML = list.map(s => `
-            <div class="card ${s.status}">
-                <div class="category-tag">${s.category}</div>
-                <div class="channel-name">${s.name}</div>
-                <div class="status-info">
-                    <span class="status-dot"></span>
-                    <span style="font-size: 13px; font-weight: 800; color: ${s.status === 'OFFLINE' ? 'var(--error)' : 'var(--success)'}">
-                        ${s.status === 'PROTECTED' ? 'ONLINE <small>(Codificado)</small>' : s.status} ${s.code !== 200 && s.code !== 0 ? '(HTTP ' + s.code + ')' : ''}
-                    </span>
+        grid.innerHTML = list.map(s => {
+            let displayStatus = s.status;
+            let displayColor = (s.status === 'OFFLINE' || s.status === 'ERROR') ? 'var(--error)' : 'var(--success)';
+            let extraInfo = s.code !== 200 && s.code !== 0 ? `(HTTP ${s.code})` : '';
+
+            if (s.status === 'PROTECTED') {
+                displayStatus = 'ONLINE <small>(Codificado)</small>';
+            }
+
+            // Caso Especial: NovaSports 404
+            if (s.name.toUpperCase().includes("NOVASPORTS") && s.code === 404) {
+                displayStatus = 'OFFLINE <small>(Sin Evento Disponible)</small>';
+                extraInfo = '';
+            }
+
+            return `
+                <div class="card ${s.status}">
+                    <div class="category-tag">${s.category}</div>
+                    <div class="channel-name">${s.name}</div>
+                    <div class="status-info">
+                        <span class="status-dot"></span>
+                        <span style="font-size: 13px; font-weight: 800; color: ${displayColor}">
+                            ${displayStatus} ${extraInfo}
+                        </span>
+                    </div>
+                    <div class="latency">
+                        <i class="fas fa-bolt"></i> Latencia: ${s.latency}
+                    </div>
                 </div>
-                <div class="latency">
-                    <i class="fas fa-bolt"></i> Latencia: ${s.latency}
-                </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
     }
 
     function filter() {
