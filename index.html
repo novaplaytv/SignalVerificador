@@ -27,11 +27,15 @@
         .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 18px; color: #fff; text-decoration: none; }
         .brand img { width: 32px; border-radius: 6px; }
 
+        .nav-links { display: flex; gap: 15px; align-items: center; }
+        .nav-links a { color: #ccc; text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.2s; padding: 10px 15px; border-radius: 10px; }
+        .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+
         .btn-login-nav, .btn-logout { background: var(--primary); color: #fff; font-weight: 800; border: none; cursor: pointer; padding: 8px 18px; border-radius: 10px; font-size: 12px; }
         .btn-logout { background: #222; }
 
         /* Dropdown de Administración Premium - FIX DEFINITIVO */
-        .admin-menu { position: relative; display: none; padding: 10px 0; margin: -10px 0; }
+        .admin-menu { position: relative; display: flex; align-items: center; padding: 10px 0; margin: -10px 0; }
         .btn-admin { background: #fff; color: #000; font-weight: 900; border: none; cursor: pointer; padding: 10px 20px; border-radius: 12px; font-size: 13px; display: flex; align-items: center; gap: 10px; transition: 0.2s; position: relative; z-index: 10002; }
         .btn-admin:hover { background: var(--primary); color: #fff; box-shadow: 0 0 20px rgba(229,9,20,0.4); }
         .dropdown-content { position: absolute; top: 100%; right: 0; background: var(--card-bg); min-width: 260px; border-radius: 20px; border: 1px solid var(--border); overflow: hidden; display: none; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,0.8); z-index: 10001; margin-top: 5px; }
@@ -87,17 +91,22 @@
             <img src="https://raw.githubusercontent.com/novaplaytv/novaimg/main/novasplash.webp">
             Novaplay | Verificador de Señal
         </a>
-        <div id="auth-controls">
-            <button class="btn-login-nav" id="btnLogin" onclick="mostrarLogin()">ADMIN</button>
-            <div class="admin-menu" id="adminMenu">
-                <button class="btn-admin"><i class="fas fa-user-shield"></i> PANEL</button>
-                <div class="dropdown-content">
-                    <a href="https://novaplaytv.github.io/Dashboard/"><i class="fas fa-chart-line"></i> Dashboard Central</a>
-                    <a href="https://novaplaytv.github.io/panel-canales/"><i class="fas fa-tv"></i> Admin. Canales</a>
-                    <a href="https://novaplaytv.github.io/NovaSecurity/"><i class="fas fa-shield-alt"></i> NovaSecurity</a>
-                    <a href="https://novaplaytv.github.io/SignalVerificador/"><i class="fas fa-broadcast-tower"></i> Verificador de Señal</a>
-                    <a href="https://novaplaytv.github.io/novaimg/"><i class="fas fa-icons"></i> Gestión de Iconos</a>
-                    <a href="#" onclick="cerrarSesion(); return false;" class="logout-link"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="nav-links">
+                <a href="https://novaplaytv.github.io/" style="color: var(--primary); font-weight: 800;">INICIO</a>
+            </div>
+            <div id="auth-controls">
+                <button class="btn-login-nav" id="btnLogin" onclick="mostrarLogin()">ADMIN</button>
+                <div class="admin-menu" id="adminMenu" style="display: none;">
+                    <button class="btn-admin"><i class="fas fa-user-shield"></i> PANEL</button>
+                    <div class="dropdown-content">
+                        <a href="https://novaplaytv.github.io/Dashboard/"><i class="fas fa-chart-line"></i> Dashboard Central</a>
+                        <a href="https://novaplaytv.github.io/panel-canales/"><i class="fas fa-tv"></i> Admin. Canales</a>
+                        <a href="https://novaplaytv.github.io/NovaSecurity/"><i class="fas fa-shield-alt"></i> NovaSecurity</a>
+                        <a href="https://novaplaytv.github.io/SignalVerificador/"><i class="fas fa-broadcast-tower"></i> Verificador de Señal</a>
+                        <a href="https://novaplaytv.github.io/novaimg/"><i class="fas fa-icons"></i> Gestión de Iconos</a>
+                        <a href="#" onclick="cerrarSesion(); return false;" class="logout-link"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -215,7 +224,7 @@
         }).join('');
 
         document.getElementById('btnLogin').classList.toggle('hidden', isAdmin);
-        document.getElementById('adminMenu').style.display = isAdmin ? 'block' : 'none';
+        document.getElementById('adminMenu').style.display = isAdmin ? 'flex' : 'none';
     }
 
     async function setManual(id, status) {
