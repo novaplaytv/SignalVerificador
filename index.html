@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novaplay | Verificador de Señal</title>
+    <title>Novaplay | Verificador de SeÃ±al</title>
     <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/novaplaytv/novaimg/main/novasplash.webp">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
         .btn-login-nav, .btn-logout { background: var(--primary); color: #fff; font-weight: 800; border: none; cursor: pointer; padding: 8px 18px; border-radius: 10px; font-size: 12px; }
         .btn-logout { background: #222; }
 
-        /* Dropdown de Administración Premium - FIX DEFINITIVO */
+        /* Dropdown de AdministraciÃ³n Premium - FIX DEFINITIVO */
         .admin-menu { position: relative; display: none; padding: 10px 0; margin: -10px 0; }
         .btn-admin { background: #fff; color: #000; font-weight: 900; border: none; cursor: pointer; padding: 10px 20px; border-radius: 12px; font-size: 13px; display: flex; align-items: center; gap: 10px; transition: 0.2s; position: relative; z-index: 10002; }
         .btn-admin:hover { background: var(--primary); color: #fff; box-shadow: 0 0 20px rgba(229,9,20,0.4); }
@@ -85,7 +85,7 @@
     <div class="nav-inner">
         <a href="https://novaplaytv.github.io/Dashboard/" class="brand">
             <img src="https://raw.githubusercontent.com/novaplaytv/novaimg/main/novasplash.webp">
-            Novaplay | Verificador de Señal
+            Novaplay | Verificador de SeÃ±al
         </a>
         <div id="auth-controls">
             <button class="btn-login-nav" id="btnLogin" onclick="mostrarLogin()">ADMIN</button>
@@ -95,9 +95,9 @@
                     <a href="https://novaplaytv.github.io/Dashboard/"><i class="fas fa-chart-line"></i> Dashboard Central</a>
                     <a href="https://novaplaytv.github.io/panel-canales/"><i class="fas fa-tv"></i> Admin. Canales</a>
                     <a href="https://novaplaytv.github.io/NovaSecurity/"><i class="fas fa-shield-alt"></i> NovaSecurity</a>
-                    <a href="https://novaplaytv.github.io/SignalVerificador/"><i class="fas fa-broadcast-tower"></i> Verificador de Señal</a>
-                    <a href="https://novaplaytv.github.io/novaimg/"><i class="fas fa-icons"></i> Gestión de Iconos</a>
-                    <a href="#" onclick="cerrarSesion(); return false;" class="logout-link"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    <a href="https://novaplaytv.github.io/SignalVerificador/"><i class="fas fa-broadcast-tower"></i> Verificador de SeÃ±al</a>
+                    <a href="https://novaplaytv.github.io/novaimg/"><i class="fas fa-icons"></i> GestiÃ³n de Iconos</a>
+                    <a href="#" onclick="cerrarSesion(); return false;" class="logout-link"><i class="fas fa-sign-out-alt"></i> Cerrar SesiÃ³n</a>
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@
 <div class="nova-modal-overlay" id="novaModal">
     <div class="nova-modal">
         <h3 id="modalTitle">Confirmar</h3>
-        <p id="modalMessage">¿Deseas realizar esta acción?</p>
+        <p id="modalMessage">Â¿Deseas realizar esta acciÃ³n?</p>
         <div class="nova-modal-btns">
             <button class="nova-modal-btn btn-cancel" id="modalCancel">CANCELAR</button>
             <button class="nova-modal-btn btn-confirm" id="modalConfirm">ACEPTAR</button>
@@ -124,8 +124,8 @@
             <input type="text" id="username" placeholder="Usuario Staff" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
         </div>
         <div style="text-align: left; margin-bottom: 20px;">
-            <label style="display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase;">Contraseña</label>
-            <input type="password" id="password" placeholder="Contraseña" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
+            <label style="display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase;">ContraseÃ±a</label>
+            <input type="password" id="password" placeholder="ContraseÃ±a" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
         </div>
         <button class="nova-modal-btn btn-confirm" style="width:100%;" onclick="iniciarSesion()">ENTRAR AL PANEL</button>
         <button class="btn-manual" style="margin-top:15px; width: 100%;" onclick="document.getElementById('auth-view').style.display='none'">CANCELAR</button>
@@ -134,7 +134,7 @@
 
 <main>
     <div class="header">
-        <h1>Búnker de Monitoreo</h1>
+        <h1>BÃºnker de Monitoreo</h1>
         <div class="update-tag" id="lastUpdate">Sincronizando estado...</div>
     </div>
     <div class="grid" id="mainGrid"></div>
@@ -165,7 +165,7 @@
         try {
             const res = await fetch('status.json?t=' + Date.now()).then(r => r.json());
             allSignals = res.results;
-            document.getElementById('lastUpdate').innerText = "Última Verificación: " + res.last_update;
+            document.getElementById('lastUpdate').innerText = "Ãšltima VerificaciÃ³n: " + res.last_update;
             render();
         } catch (e) {
             document.getElementById('mainGrid').innerHTML = "<p style='text-align:center; width:100%; opacity:0.5;'>Iniciando primer reporte...</p>";
@@ -221,7 +221,7 @@
     async function setManual(id, status) {
         openModal(
             status ? "Forzar Online" : "Quitar Forzado",
-            status ? "¿Marcar este canal como ONLINE manualmente?" : "¿Restablecer verificación automática?",
+            status ? "Â¿Marcar este canal como ONLINE manualmente?" : "Â¿Restablecer verificaciÃ³n automÃ¡tica?",
             async () => {
                 const res = await req({
                     action: "seguridad_set_manual_signal",
@@ -233,7 +233,7 @@
                 if (res.success) {
                     location.reload();
                 } else {
-                    openModal("Error", "Fallo al guardar: " + (res.error || "Acción no permitida"), () => {});
+                    openModal("Error", "Fallo al guardar: " + (res.error || "AcciÃ³n no permitida"), () => {});
                 }
             }
         );
