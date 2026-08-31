@@ -97,7 +97,7 @@
             </div>
             <div id="auth-controls">
                 <button class="btn-login-nav" id="btnLogin" onclick="mostrarLogin()">ADMIN</button>
-                <div class="admin-menu" id="adminMenu" style="display: none;">
+                <div class="admin-menu" id="adminMenu">
                     <button class="btn-admin"><i class="fas fa-user-shield"></i> PANEL</button>
                     <div class="dropdown-content">
                         <a href="https://novaplaytv.github.io/Dashboard/"><i class="fas fa-chart-line"></i> Dashboard Central</a>
@@ -224,7 +224,6 @@
         }).join('');
 
         document.getElementById('btnLogin').classList.toggle('hidden', isAdmin);
-        document.getElementById('adminMenu').style.display = isAdmin ? 'flex' : 'none';
     }
 
     async function setManual(id, status) {
