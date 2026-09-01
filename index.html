@@ -80,6 +80,7 @@
         .form-group-auth label { display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase; }
 
         /* NovaModal Premium */
+        .nova-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 20000; display: none; align-items: center; justify-content: center; padding: 20px; }
         .nova-modal { position: relative; background: var(--card-bg); border: 1px solid var(--border); border-radius: 30px; width: 100%; max-width: 450px; padding: 40px; box-shadow: 0 25px 60px rgba(0,0,0,0.6); text-align: center; animation: modal-in 0.3s ease-out; }
         .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text-muted); font-size: 20px; cursor: pointer; transition: 0.2s; z-index: 10; }
         .modal-close:hover { color: var(--primary); transform: scale(1.1); }
@@ -292,6 +293,44 @@
             localStorage.removeItem("novaplay_session_token");
             location.reload();
         });
+    }
+
+    /* NovaModal Premium */
+    function openModal(title, msg, onConfirm, type = "confirm", options = [], defaultValue = "") {
+        const m = document.getElementById("novaModal");
+        if (!m) return;
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalMessage").innerText = msg;
+        const inputContainer = document.getElementById("modalInputContainer");
+        const input = document.getElementById("modalInput");
+        const select = document.getElementById("modalSelect");
+
+        if (inputContainer) inputContainer.classList.add("hidden");
+        if (input) input.classList.add("hidden");
+        if (select) select.classList.add("hidden");
+
+        if (type === "prompt") {
+            inputContainer.classList.remove("hidden");
+            input.classList.remove("hidden");
+            input.value = defaultValue;
+            setTimeout(() => input.focus(), 100);
+        } else if (type === "select") {
+            inputContainer.classList.remove("hidden");
+            select.classList.remove("hidden");
+            select.innerHTML = options.map(o => `<option value="${o.value}">${o.text}</option>`).join('');
+            setTimeout(() => select.focus(), 100);
+        }
+
+        m.style.display = "flex";
+
+        const close = () => { m.style.display = "none"; };
+        document.getElementById("modalCancel").onclick = close;
+        document.getElementById("modalConfirm").onclick = () => {
+            if (type === "prompt") onConfirm(input.value);
+            else if (type === "select") onConfirm(select.value);
+            else onConfirm();
+            close();
+        };
     }
 
     loadData();
