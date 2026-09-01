@@ -128,14 +128,17 @@
     </div>
 </nav>
 
-<!-- Modales Premium -->
 <div class="nova-modal-overlay" id="novaModal">
     <div class="nova-modal">
-        <h3 id="modalTitle">Confirmar</h3>
-        <p id="modalMessage">¿Deseas realizar esta acción?</p>
+        <h3 id="novaModalTitle" style="font-weight:900;">Confirmar</h3>
+        <p id="novaModalMessage" style="color: var(--text-muted); margin-bottom: 25px; line-height: 1.5;"></p>
+        <div id="modalInputContainer" class="hidden">
+            <input type="text" id="modalInput" placeholder="...">
+            <select id="modalSelect" class="hidden"></select>
+        </div>
         <div class="nova-modal-btns">
-            <button class="nova-modal-btn btn-cancel" id="modalCancel">CANCELAR</button>
-            <button class="nova-modal-btn btn-confirm" id="modalConfirm">ACEPTAR</button>
+            <button class="nova-modal-btn btn-cancel" id="novaModalCancel">CANCELAR</button>
+            <button class="nova-modal-btn btn-confirm" id="novaModalConfirm">ACEPTAR</button>
         </div>
     </div>
 </div>
@@ -299,8 +302,8 @@
     function openModal(title, msg, onConfirm, type = "confirm", options = [], defaultValue = "") {
         const m = document.getElementById("novaModal");
         if (!m) return;
-        document.getElementById("modalTitle").innerText = title;
-        document.getElementById("modalMessage").innerText = msg;
+        document.getElementById("novaModalTitle").innerText = title;
+        document.getElementById("novaModalMessage").innerText = msg;
         const inputContainer = document.getElementById("modalInputContainer");
         const input = document.getElementById("modalInput");
         const select = document.getElementById("modalSelect");
@@ -310,22 +313,26 @@
         if (select) select.classList.add("hidden");
 
         if (type === "prompt") {
-            inputContainer.classList.remove("hidden");
-            input.classList.remove("hidden");
-            input.value = defaultValue;
-            setTimeout(() => input.focus(), 100);
+            if (inputContainer) inputContainer.classList.remove("hidden");
+            if (input) {
+                input.classList.remove("hidden");
+                input.value = defaultValue;
+                setTimeout(() => input.focus(), 100);
+            }
         } else if (type === "select") {
-            inputContainer.classList.remove("hidden");
-            select.classList.remove("hidden");
-            select.innerHTML = options.map(o => `<option value="${o.value}">${o.text}</option>`).join('');
-            setTimeout(() => select.focus(), 100);
+            if (inputContainer) inputContainer.classList.remove("hidden");
+            if (select) {
+                select.classList.remove("hidden");
+                select.innerHTML = options.map(o => `<option value="${o.value}">${o.text}</option>`).join('');
+                setTimeout(() => select.focus(), 100);
+            }
         }
 
         m.style.display = "flex";
 
         const close = () => { m.style.display = "none"; };
-        document.getElementById("modalCancel").onclick = close;
-        document.getElementById("modalConfirm").onclick = () => {
+        document.getElementById("novaModalCancel").onclick = close;
+        document.getElementById("novaModalConfirm").onclick = () => {
             if (type === "prompt") onConfirm(input.value);
             else if (type === "select") onConfirm(select.value);
             else onConfirm();
