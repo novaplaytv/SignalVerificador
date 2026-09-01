@@ -70,8 +70,16 @@
         .btn-manual { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; font-size: 9px; font-weight: 800; padding: 4px 8px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
         .btn-manual:hover { background: var(--primary); border-color: var(--primary); }
 
+        /* Login */
+        #auth-view { position: fixed; inset: 0; background: var(--bg); z-index: 10001; display: none; justify-content: center; align-items: center; }
+        .auth-card { width: 400px; padding: 50px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 35px; text-align: center; box-shadow: 0 30px 80px rgba(0,0,0,0.6); position: relative; }
+        .auth-card input { width: 100%; padding: 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; color: #fff; margin-bottom: 15px; font-size: 15px; }
+        .status { margin-top: 15px; padding: 14px; border-radius: 12px; font-size: 13px; font-weight: 800; display: none; text-align: center; }
+        .status.error { background: rgba(239,68,68,0.1); color: var(--error); border: 1px solid var(--error); }
+        .form-group-auth { text-align: left; margin-bottom: 20px; }
+        .form-group-auth label { display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase; }
+
         /* NovaModal Premium */
-        .nova-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 20000; display: none; align-items: center; justify-content: center; padding: 20px; }
         .nova-modal { position: relative; background: var(--card-bg); border: 1px solid var(--border); border-radius: 30px; width: 100%; max-width: 450px; padding: 40px; box-shadow: 0 25px 60px rgba(0,0,0,0.6); text-align: center; animation: modal-in 0.3s ease-out; }
         .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text-muted); font-size: 20px; cursor: pointer; transition: 0.2s; z-index: 10; }
         .modal-close:hover { color: var(--primary); transform: scale(1.1); }
@@ -131,19 +139,20 @@
     </div>
 </div>
 
-<div id="auth-view" class="nova-modal-overlay">
-    <div class="auth-card nova-modal">
+<div id="auth-view">
+    <div class="auth-card">
         <button class="modal-close" onclick="document.getElementById('auth-view').style.display='none'"><i class="fas fa-times"></i></button>
-        <h3 style="margin-bottom:25px;">Acceso al Panel</h3>
-        <div style="text-align: left; margin-bottom: 20px;">
-            <label style="display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase;">Usuario</label>
-            <input type="text" id="username" placeholder="Usuario Staff" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
+        <h2 style="margin-bottom:30px; font-weight:900; font-size: 28px;">Acceso al Panel</h2>
+        <div class="form-group-auth">
+            <label>Usuario</label>
+            <input type="text" id="username" placeholder="Usuario Staff">
         </div>
-        <div style="text-align: left; margin-bottom: 20px;">
-            <label style="display: block; margin-bottom: 8px; font-size: 11px; font-weight: 900; color: #aaa; text-transform: uppercase;">Contraseña</label>
-            <input type="password" id="password" placeholder="Contraseña" style="width: 100%; padding: 15px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; color: #fff;">
+        <div class="form-group-auth">
+            <label>Contraseña</label>
+            <input type="password" id="password" placeholder="••••••••">
         </div>
-        <button class="nova-modal-btn btn-confirm" style="width:100%;" onclick="iniciarSesion()">ENTRAR AL VERIFICADOR</button>
+        <button class="btn-login-nav" style="width:100%; justify-content:center; padding: 18px; border-radius: 14px; font-weight: 900;" onclick="iniciarSesion()">ENTRAR AL VERIFICADOR</button>
+        <div id="loginStatus" class="status"></div>
     </div>
 </div>
 
@@ -259,14 +268,31 @@
     async function iniciarSesion() {
         const u = document.getElementById("username").value;
         const p = document.getElementById("password").value;
+        const btn = document.getElementById("btnLogin");
+        const loginBtn = document.querySelector("#auth-view .btn-login-nav");
+        loginBtn.disabled = true; loginBtn.innerText = "VERIFICANDO...";
+
         const res = await req({ action: "login", username: u, password: p });
         if (res.token) {
             sessionToken = res.token;
             localStorage.setItem("novaplay_session_token", res.token);
             location.reload();
-        } else { openModal("Error", "Acceso denegado", () => {}); }
+        } else {
+            const el = document.getElementById("loginStatus");
+            el.className = "status error";
+            el.textContent = "Acceso denegado.";
+            el.style.display = "block";
+            loginBtn.disabled = false;
+            loginBtn.textContent = 'ENTRAR AL VERIFICADOR';
+        }
     }
-    function cerrarSesion() { localStorage.removeItem("novaplay_session_token"); location.reload(); }
+
+    function cerrarSesion() {
+        openModal("Cerrar Sesión", "¿Estás seguro que deseas salir del Verificador?", () => {
+            localStorage.removeItem("novaplay_session_token");
+            location.reload();
+        });
+    }
 
     loadData();
 </script>
