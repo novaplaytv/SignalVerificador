@@ -1,5 +1,5 @@
 {
-    "last_update": "2026-09-04 07:05:04",
+    "last_update": "2026-09-04 08:05:10",
     "results": [
         {
             "id": "1",
@@ -230,7 +230,7 @@
             "name": "BRUNO MASI TV",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "647ms",
+            "latency": "667ms",
             "code": 200
         },
         {
@@ -246,7 +246,7 @@
             "name": "TV MAX CNEL OVIEDO",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "395ms",
+            "latency": "376ms",
             "code": 200
         },
         {
@@ -254,7 +254,7 @@
             "name": "TVS ENCARNACI\u00d3N",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "444ms",
+            "latency": "400ms",
             "code": 200
         },
         {
@@ -262,7 +262,7 @@
             "name": "PILAR STREAMING",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "1177ms",
+            "latency": "872ms",
             "code": 200
         },
         {
@@ -270,7 +270,7 @@
             "name": "CAMBYRETA TV",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "971ms",
+            "latency": "1128ms",
             "code": 200
         },
         {
@@ -278,7 +278,7 @@
             "name": "VISI\u00d3N TV",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "2091ms",
+            "latency": "2146ms",
             "code": 200
         },
         {
@@ -286,7 +286,7 @@
             "name": "FARRATV",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "142ms",
+            "latency": "117ms",
             "code": 200
         },
         {
@@ -294,7 +294,7 @@
             "name": "XPRESSTV",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "1081ms",
+            "latency": "1016ms",
             "code": 200
         },
         {
@@ -302,7 +302,7 @@
             "name": "REGIONAL TV",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "1077ms",
+            "latency": "1036ms",
             "code": 200
         },
         {
@@ -342,7 +342,7 @@
             "name": "RED DIGITAL",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "1102ms",
+            "latency": "930ms",
             "code": 200
         },
         {
@@ -350,7 +350,7 @@
             "name": "TV AIRE",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "1012ms",
+            "latency": "1027ms",
             "code": 200
         },
         {
@@ -374,7 +374,7 @@
             "name": "NEXT",
             "category": "PARAGUAY",
             "status": "ONLINE",
-            "latency": "393ms",
+            "latency": "716ms",
             "code": 200
         },
         {
@@ -526,7 +526,7 @@
             "name": "24/7 NOTICIAS NEUQUEN",
             "category": " ARGENTINA",
             "status": "ONLINE",
-            "latency": "708ms",
+            "latency": "613ms",
             "code": 200
         },
         {
@@ -534,23 +534,23 @@
             "name": "NET TV",
             "category": " ARGENTINA",
             "status": "ONLINE",
-            "latency": "1198ms",
+            "latency": "1150ms",
             "code": 200
         },
         {
             "id": "68",
             "name": "CANAL 21",
             "category": " ARGENTINA",
-            "status": "OFFLINE",
-            "latency": "-",
-            "code": 404
+            "status": "ONLINE",
+            "latency": "1357ms",
+            "code": 200
         },
         {
             "id": "69",
             "name": "CANAL 4",
             "category": " ARGENTINA",
             "status": "ONLINE",
-            "latency": "909ms",
+            "latency": "880ms",
             "code": 200
         },
         {
@@ -558,7 +558,7 @@
             "name": "COSMOS TV",
             "category": " ARGENTINA",
             "status": "ONLINE",
-            "latency": "1016ms",
+            "latency": "609ms",
             "code": 200
         },
         {
@@ -574,7 +574,7 @@
             "name": "TELEMAX",
             "category": " ARGENTINA",
             "status": "ONLINE",
-            "latency": "782ms",
+            "latency": "827ms",
             "code": 200
         },
         {
@@ -582,7 +582,7 @@
             "name": "Canal 11",
             "category": " ARGENTINA",
             "status": "ONLINE",
-            "latency": "406ms",
+            "latency": "386ms",
             "code": 200
         },
         {
@@ -614,7 +614,7 @@
             "name": "GARAGE TV",
             "category": " ARGENTINA",
             "status": "ONLINE",
-            "latency": "642ms",
+            "latency": "593ms",
             "code": 200
         },
         {
@@ -654,7 +654,7 @@
             "name": "MEGA HD",
             "category": "URUGUAY Y CHILE",
             "status": "ONLINE",
-            "latency": "981ms",
+            "latency": "1129ms",
             "code": 200
         },
         {
@@ -678,7 +678,7 @@
             "name": "TV BAND",
             "category": "BRASIL",
             "status": "ONLINE",
-            "latency": "237ms",
+            "latency": "465ms",
             "code": 200
         },
         {
@@ -694,7 +694,7 @@
             "name": "TV MAIS BR",
             "category": "BRASIL",
             "status": "ONLINE",
-            "latency": "726ms",
+            "latency": "682ms",
             "code": 200
         },
         {
@@ -710,7 +710,7 @@
             "name": "AZTECA INTERNACIONAL",
             "category": "MEXICO",
             "status": "ONLINE",
-            "latency": "62ms",
+            "latency": "183ms",
             "code": 200
         },
         {
@@ -718,7 +718,7 @@
             "name": "CANAL JALISCO TV",
             "category": "MEXICO",
             "status": "ONLINE",
-            "latency": "375ms",
+            "latency": "393ms",
             "code": 200
         },
         {
@@ -734,7 +734,7 @@
             "name": "LAS ESTRELLAS",
             "category": "MEXICO",
             "status": "ONLINE",
-            "latency": "234ms",
+            "latency": "165ms",
             "code": 200
         },
         {
@@ -742,7 +742,7 @@
             "name": "NU9VE",
             "category": "MEXICO",
             "status": "ONLINE",
-            "latency": "87ms",
+            "latency": "86ms",
             "code": 200
         },
         {
@@ -750,7 +750,7 @@
             "name": "CANAL 5",
             "category": "MEXICO",
             "status": "ONLINE",
-            "latency": "31ms",
+            "latency": "67ms",
             "code": 200
         },
         {
@@ -758,7 +758,7 @@
             "name": "CORAZON",
             "category": "MEXICO",
             "status": "ONLINE",
-            "latency": "56ms",
+            "latency": "163ms",
             "code": 200
         },
         {
@@ -766,7 +766,7 @@
             "name": "AZTECA 1",
             "category": "MEXICO",
             "status": "ONLINE",
-            "latency": "99ms",
+            "latency": "190ms",
             "code": 200
         },
         {
@@ -878,7 +878,7 @@
             "name": "FOX DEPORTES",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "90ms",
+            "latency": "187ms",
             "code": 200
         },
         {
@@ -894,7 +894,7 @@
             "name": "FOX SPORTS MX",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "92ms",
+            "latency": "597ms",
             "code": 200
         },
         {
@@ -910,7 +910,7 @@
             "name": "FOX SPORTS 2 MX",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "94ms",
+            "latency": "157ms",
             "code": 200
         },
         {
@@ -926,7 +926,7 @@
             "name": "FOX SPORTS 3 MX",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "88ms",
+            "latency": "79ms",
             "code": 200
         },
         {
@@ -934,7 +934,7 @@
             "name": "FOX SPORTS PREMIUM MX ",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "268ms",
+            "latency": "719ms",
             "code": 200
         },
         {
@@ -942,7 +942,7 @@
             "name": "FOX",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "92ms",
+            "latency": "179ms",
             "code": 200
         },
         {
@@ -989,17 +989,17 @@
             "id": "124",
             "name": "DSPORTS ARGENTINA SD ",
             "category": "DEPORTES",
-            "status": "OFFLINE",
-            "latency": "-",
-            "code": 591
+            "status": "ONLINE",
+            "latency": "469ms",
+            "code": 200
         },
         {
             "id": "125",
             "name": "DSPORTS ARGENTINA HD",
             "category": "DEPORTES",
-            "status": "OFFLINE",
-            "latency": "-",
-            "code": 591
+            "status": "ONLINE",
+            "latency": "468ms",
+            "code": 200
         },
         {
             "id": "126",
@@ -1013,17 +1013,17 @@
             "id": "127",
             "name": "DSPORTS OPC 3",
             "category": "DEPORTES",
-            "status": "OFFLINE",
-            "latency": "-",
-            "code": 591
+            "status": "ONLINE",
+            "latency": "883ms",
+            "code": 200
         },
         {
             "id": "128",
             "name": "DSPORTS OPC 4",
             "category": "DEPORTES",
-            "status": "OFFLINE",
-            "latency": "-",
-            "code": 591
+            "status": "ONLINE",
+            "latency": "520ms",
+            "code": 200
         },
         {
             "id": "129",
@@ -1046,23 +1046,23 @@
             "name": "DSPORTS COLOMBIA",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "199ms",
+            "latency": "469ms",
             "code": 200
         },
         {
             "id": "132",
             "name": "DSPORTS 2 ARGENTINA",
             "category": "DEPORTES",
-            "status": "OFFLINE",
-            "latency": "-",
-            "code": 591
+            "status": "ONLINE",
+            "latency": "477ms",
+            "code": 200
         },
         {
             "id": "133",
             "name": "DSPORTS 2 ARGENTINA - OPC 2",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "200ms",
+            "latency": "560ms",
             "code": 200
         },
         {
@@ -1085,9 +1085,9 @@
             "id": "136",
             "name": "DSPORTS PLUS",
             "category": "DEPORTES",
-            "status": "OFFLINE",
-            "latency": "-",
-            "code": 591
+            "status": "ONLINE",
+            "latency": "471ms",
+            "code": 200
         },
         {
             "id": "137",
@@ -1102,7 +1102,7 @@
             "name": "LA LIGA HYPERMOTION",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "700ms",
+            "latency": "597ms",
             "code": 200
         },
         {
@@ -1126,7 +1126,7 @@
             "name": "CAZETV",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "251ms",
+            "latency": "303ms",
             "code": 200
         },
         {
@@ -1134,7 +1134,7 @@
             "name": "SPORTV 2",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "477ms",
+            "latency": "277ms",
             "code": 200
         },
         {
@@ -1142,7 +1142,7 @@
             "name": "SPORTV 3",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "574ms",
+            "latency": "265ms",
             "code": 200
         },
         {
@@ -1150,7 +1150,7 @@
             "name": "PREMIERE  CLUBES",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "281ms",
+            "latency": "274ms",
             "code": 200
         },
         {
@@ -1166,7 +1166,7 @@
             "name": "VIX TUDN",
             "category": "DEPORTES",
             "status": "ONLINE",
-            "latency": "579ms",
+            "latency": "569ms",
             "code": 200
         },
         {
@@ -1238,7 +1238,7 @@
             "name": "NCIS Criminologia Naval",
             "category": "ENTRETENIMIENTO",
             "status": "ONLINE",
-            "latency": "811ms",
+            "latency": "711ms",
             "code": 200
         },
         {
@@ -1502,7 +1502,7 @@
             "name": "CNN EN ESPA\u00d1OL",
             "category": "NOTICIAS INTERNACIONALES",
             "status": "ONLINE",
-            "latency": "482ms",
+            "latency": "591ms",
             "code": 200
         },
         {
@@ -1566,7 +1566,7 @@
             "name": "LA 1",
             "category": "VARIADOS - INTERNACIONALES",
             "status": "ONLINE",
-            "latency": "401ms",
+            "latency": "414ms",
             "code": 200
         },
         {
@@ -1614,7 +1614,7 @@
             "name": "TELEMUNDO 51",
             "category": "VARIADOS - INTERNACIONALES",
             "status": "ONLINE",
-            "latency": "113ms",
+            "latency": "252ms",
             "code": 200
         },
         {
@@ -1638,7 +1638,7 @@
             "name": "CGTN",
             "category": "VARIADOS - INTERNACIONALES",
             "status": "ONLINE",
-            "latency": "137ms",
+            "latency": "258ms",
             "code": 200
         },
         {
@@ -1654,7 +1654,7 @@
             "name": "EWTN TV",
             "category": "RELIGIOSO",
             "status": "ONLINE",
-            "latency": "333ms",
+            "latency": "203ms",
             "code": 200
         },
         {
@@ -1774,7 +1774,7 @@
             "name": "BABY SHARK TV",
             "category": "NI\u00d1OS",
             "status": "ONLINE",
-            "latency": "746ms",
+            "latency": "662ms",
             "code": 200
         },
         {
@@ -1782,7 +1782,7 @@
             "name": "NARUTO SHIPPUDEN",
             "category": "NI\u00d1OS",
             "status": "ONLINE",
-            "latency": "1002ms",
+            "latency": "594ms",
             "code": 200
         },
         {
@@ -1790,7 +1790,7 @@
             "name": "NICKELODEON TOONS",
             "category": "NI\u00d1OS",
             "status": "ONLINE",
-            "latency": "746ms",
+            "latency": "458ms",
             "code": 200
         },
         {
@@ -1798,7 +1798,7 @@
             "name": "NICK JR CLUB",
             "category": "NI\u00d1OS",
             "status": "ONLINE",
-            "latency": "642ms",
+            "latency": "688ms",
             "code": 200
         },
         {
@@ -1806,7 +1806,7 @@
             "name": "POPEYE",
             "category": "NI\u00d1OS",
             "status": "ONLINE",
-            "latency": "631ms",
+            "latency": "602ms",
             "code": 200
         },
         {
@@ -1814,7 +1814,7 @@
             "name": "POKEMON",
             "category": "NI\u00d1OS",
             "status": "ONLINE",
-            "latency": "796ms",
+            "latency": "877ms",
             "code": 200
         },
         {
@@ -1822,7 +1822,7 @@
             "name": "NICKELODEON CLASICOS",
             "category": "NI\u00d1OS",
             "status": "ONLINE",
-            "latency": "712ms",
+            "latency": "643ms",
             "code": 200
         },
         {
@@ -1830,7 +1830,7 @@
             "name": "PLUTO.TV CINE ESTELAR",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "634ms",
+            "latency": "778ms",
             "code": 200
         },
         {
@@ -1838,7 +1838,7 @@
             "name": "PLUTO.TV CINE ACCI\u00d3N",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "628ms",
+            "latency": "345ms",
             "code": 200
         },
         {
@@ -1846,7 +1846,7 @@
             "name": "ESTRELLAS DE ACCI\u00d3N",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "344ms",
+            "latency": "668ms",
             "code": 200
         },
         {
@@ -1854,7 +1854,7 @@
             "name": "ADRENALINA PURA",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "685ms",
+            "latency": "421ms",
             "code": 200
         },
         {
@@ -1862,7 +1862,7 @@
             "name": "PLUTO.TV CINE COMEDIA",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "682ms",
+            "latency": "595ms",
             "code": 200
         },
         {
@@ -1870,7 +1870,7 @@
             "name": "PLUTO.TV CINE DRAMA",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "620ms",
+            "latency": "675ms",
             "code": 200
         },
         {
@@ -1878,7 +1878,7 @@
             "name": "PLUTO.TV CINE ROMANCE",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "815ms",
+            "latency": "2239ms",
             "code": 200
         },
         {
@@ -1886,7 +1886,7 @@
             "name": "PLUTO.TV CINE SUSPENSO",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "631ms",
+            "latency": "599ms",
             "code": 200
         },
         {
@@ -1894,7 +1894,7 @@
             "name": "PLUTO.TV CINE CRIMEN",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "622ms",
+            "latency": "661ms",
             "code": 200
         },
         {
@@ -1902,7 +1902,7 @@
             "name": "PLUTO.TV CINE TERROR",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "631ms",
+            "latency": "629ms",
             "code": 200
         },
         {
@@ -1910,7 +1910,7 @@
             "name": "PLUTO.TV SCI-FI",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "633ms",
+            "latency": "594ms",
             "code": 200
         },
         {
@@ -1918,7 +1918,7 @@
             "name": "RUNTIME",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "663ms",
+            "latency": "642ms",
             "code": 200
         },
         {
@@ -1926,7 +1926,7 @@
             "name": "PLUTO.TV NUESTRO CINE",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "641ms",
+            "latency": "595ms",
             "code": 200
         },
         {
@@ -1934,7 +1934,7 @@
             "name": "PLUTO.TV CINE INSPIRADOR",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "796ms",
+            "latency": "370ms",
             "code": 200
         },
         {
@@ -1942,7 +1942,7 @@
             "name": "PLUTO.TV A LA MEXICANA",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "777ms",
+            "latency": "624ms",
             "code": 200
         },
         {
@@ -1950,7 +1950,7 @@
             "name": "PLUTO.TV CINE CL\u00c1SICO",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "332ms",
+            "latency": "847ms",
             "code": 200
         },
         {
@@ -1958,7 +1958,7 @@
             "name": "PLUTO.TV CINE FAMILIA",
             "category": "PLUTO TV - PELICULAS ",
             "status": "ONLINE",
-            "latency": "622ms",
+            "latency": "843ms",
             "code": 200
         },
         {
@@ -1966,7 +1966,7 @@
             "name": "PLUTO.TV SERIES DE CRIMEN",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "620ms",
+            "latency": "691ms",
             "code": 200
         },
         {
@@ -1974,7 +1974,7 @@
             "name": "CSI",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "614ms",
+            "latency": "584ms",
             "code": 200
         },
         {
@@ -1982,7 +1982,7 @@
             "name": "CSI: MIAMI",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "621ms",
+            "latency": "856ms",
             "code": 200
         },
         {
@@ -1990,7 +1990,7 @@
             "name": "CSI: NY",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "933ms",
+            "latency": "588ms",
             "code": 200
         },
         {
@@ -1998,7 +1998,7 @@
             "name": "LOS ASESINOS DE MIDSOMER 24/7",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "625ms",
+            "latency": "590ms",
             "code": 200
         },
         {
@@ -2006,7 +2006,7 @@
             "name": "N\u00daM3ROS",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "663ms",
+            "latency": "789ms",
             "code": 200
         },
         {
@@ -2014,7 +2014,7 @@
             "name": "PLUTO.TV SERIES DE ACCI\u00d3N",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "616ms",
+            "latency": "633ms",
             "code": 200
         },
         {
@@ -2022,7 +2022,7 @@
             "name": "ROOKIE BLUE: POLIC\u00cdAS NOVATOS 24/7",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "616ms",
+            "latency": "592ms",
             "code": 200
         },
         {
@@ -2030,7 +2030,7 @@
             "name": "STAR TREK 24/7",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "1092ms",
+            "latency": "698ms",
             "code": 200
         },
         {
@@ -2038,7 +2038,7 @@
             "name": "PLUTO.TV SERIES DE SCI-FI",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "614ms",
+            "latency": "340ms",
             "code": 200
         },
         {
@@ -2046,7 +2046,7 @@
             "name": "Z NATION",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "912ms",
+            "latency": "626ms",
             "code": 200
         },
         {
@@ -2054,7 +2054,7 @@
             "name": "RELIC HUNTER 24/7",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "895ms",
+            "latency": "594ms",
             "code": 200
         },
         {
@@ -2062,7 +2062,7 @@
             "name": "PLUTO.TV SERIES",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "620ms",
+            "latency": "594ms",
             "code": 200
         },
         {
@@ -2070,7 +2070,7 @@
             "name": "PLUTO.TV SERIES DE COMEDIA",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "617ms",
+            "latency": "668ms",
             "code": 200
         },
         {
@@ -2078,7 +2078,7 @@
             "name": "PLUTO.TV SERIES DE DRAMA",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "623ms",
+            "latency": "600ms",
             "code": 200
         },
         {
@@ -2086,7 +2086,7 @@
             "name": "PLUTO.TV SERIES CONTINENTALES",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "619ms",
+            "latency": "613ms",
             "code": 200
         },
         {
@@ -2094,7 +2094,7 @@
             "name": "PLUTO.TV K-DRAMAS",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "631ms",
+            "latency": "648ms",
             "code": 200
         },
         {
@@ -2102,7 +2102,7 @@
             "name": "PLUTO.TV TEEN K-DRAMAS",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "806ms",
+            "latency": "603ms",
             "code": 200
         },
         {
@@ -2110,7 +2110,7 @@
             "name": "VIVE KANAL D DRAMA",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "629ms",
+            "latency": "1064ms",
             "code": 200
         },
         {
@@ -2118,7 +2118,7 @@
             "name": "PLUTO.TV SERIES LATINAS",
             "category": "PLUTO TV - SERIES ",
             "status": "ONLINE",
-            "latency": "623ms",
+            "latency": "582ms",
             "code": 200
         },
         {
@@ -2126,7 +2126,7 @@
             "name": "PLUTO.TV SERIES RETRO",
             "category": "PLUTO TV - RETRO ",
             "status": "ONLINE",
-            "latency": "651ms",
+            "latency": "646ms",
             "code": 200
         },
         {
@@ -2134,7 +2134,7 @@
             "name": "HECHICERAS",
             "category": "PLUTO TV - RETRO ",
             "status": "ONLINE",
-            "latency": "630ms",
+            "latency": "610ms",
             "code": 200
         },
         {
@@ -2142,7 +2142,7 @@
             "name": "HECHIZADA",
             "category": "PLUTO TV - RETRO ",
             "status": "ONLINE",
-            "latency": "645ms",
+            "latency": "706ms",
             "code": 200
         },
         {
@@ -2150,7 +2150,7 @@
             "name": "MI BELLA GENIO",
             "category": "PLUTO TV - RETRO ",
             "status": "ONLINE",
-            "latency": "623ms",
+            "latency": "643ms",
             "code": 200
         },
         {
@@ -2158,7 +2158,7 @@
             "name": "MACGYVER",
             "category": "PLUTO TV - RETRO ",
             "status": "ONLINE",
-            "latency": "332ms",
+            "latency": "595ms",
             "code": 200
         },
         {
@@ -2166,7 +2166,7 @@
             "name": "PITUFO TV",
             "category": "PLUTO TV - RETRO ",
             "status": "ONLINE",
-            "latency": "736ms",
+            "latency": "729ms",
             "code": 200
         },
         {
@@ -2174,7 +2174,7 @@
             "name": "PLUTO.TV NOVELAS",
             "category": "PLUTO TV - NOVELAS ",
             "status": "ONLINE",
-            "latency": "634ms",
+            "latency": "660ms",
             "code": 200
         },
         {
@@ -2182,7 +2182,7 @@
             "name": "PLUTO.TV NOVELAS CONTINENTALES",
             "category": "PLUTO TV - NOVELAS ",
             "status": "ONLINE",
-            "latency": "1485ms",
+            "latency": "800ms",
             "code": 200
         },
         {
@@ -2190,7 +2190,7 @@
             "name": "PLUTO.TV NOVELAS DE MEXICO",
             "category": "PLUTO TV - NOVELAS ",
             "status": "ONLINE",
-            "latency": "337ms",
+            "latency": "369ms",
             "code": 200
         },
         {
@@ -2198,7 +2198,7 @@
             "name": "AZ CORAZ\u00d3N",
             "category": "PLUTO TV - NOVELAS ",
             "status": "ONLINE",
-            "latency": "671ms",
+            "latency": "633ms",
             "code": 200
         },
         {
@@ -2206,7 +2206,7 @@
             "name": "SIN ##### NO HAY PARA\u00cdSO",
             "category": "PLUTO TV - NOVELAS ",
             "status": "ONLINE",
-            "latency": "796ms",
+            "latency": "593ms",
             "code": 200
         },
         {
@@ -2214,7 +2214,7 @@
             "name": "LA SELECC10N",
             "category": "PLUTO TV - NOVELAS ",
             "status": "ONLINE",
-            "latency": "627ms",
+            "latency": "623ms",
             "code": 200
         },
         {
@@ -2222,7 +2222,7 @@
             "name": "PLUTO.TV NOVELAS DE VENEZUELA",
             "category": "PLUTO TV - NOVELAS ",
             "status": "ONLINE",
-            "latency": "618ms",
+            "latency": "647ms",
             "code": 200
         },
         {
@@ -2230,7 +2230,7 @@
             "name": "PLUTO.TV AMOR Y MENTIRA",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "629ms",
+            "latency": "625ms",
             "code": 200
         },
         {
@@ -2238,7 +2238,7 @@
             "name": "PLUTO.TV REALITY",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "862ms",
+            "latency": "591ms",
             "code": 200
         },
         {
@@ -2246,7 +2246,7 @@
             "name": "MTV PLUTO.TV",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "658ms",
+            "latency": "351ms",
             "code": 200
         },
         {
@@ -2254,7 +2254,7 @@
             "name": "MTV DRAG",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "627ms",
+            "latency": "656ms",
             "code": 200
         },
         {
@@ -2262,7 +2262,7 @@
             "name": "MTV REALITY",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "820ms",
+            "latency": "653ms",
             "code": 200
         },
         {
@@ -2270,7 +2270,7 @@
             "name": "MTV DATING",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "663ms",
+            "latency": "692ms",
             "code": 200
         },
         {
@@ -2278,7 +2278,7 @@
             "name": "ACAPULCO SHORE",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "338ms",
+            "latency": "655ms",
             "code": 200
         },
         {
@@ -2286,7 +2286,7 @@
             "name": "MTV CON MI EX (LA VENGANZA DE LOS EX)",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "623ms",
+            "latency": "618ms",
             "code": 200
         },
         {
@@ -2294,7 +2294,7 @@
             "name": "MTV RIDICULOUSNESS",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "368ms",
+            "latency": "753ms",
             "code": 200
         },
         {
@@ -2302,7 +2302,7 @@
             "name": "MTV TEEN MOM (MADRES ADOLESENTES)",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "729ms",
+            "latency": "1182ms",
             "code": 200
         },
         {
@@ -2310,7 +2310,7 @@
             "name": "MTV CATFISH",
             "category": "PLUTO TV - REALITY ",
             "status": "ONLINE",
-            "latency": "621ms",
+            "latency": "375ms",
             "code": 200
         },
         {
@@ -2318,7 +2318,7 @@
             "name": "PLUTO.TV COMPETENCIAS",
             "category": "PLUTO TV - COMPETENCIAS",
             "status": "ONLINE",
-            "latency": "621ms",
+            "latency": "608ms",
             "code": 200
         },
         {
@@ -2326,7 +2326,7 @@
             "name": "MASTERCHEF",
             "category": "PLUTO TV - COMPETENCIAS",
             "status": "ONLINE",
-            "latency": "626ms",
+            "latency": "620ms",
             "code": 200
         },
         {
@@ -2334,7 +2334,7 @@
             "name": "HELL\u00b4S KITCHEN",
             "category": "PLUTO TV - COMPETENCIAS",
             "status": "ONLINE",
-            "latency": "619ms",
+            "latency": "595ms",
             "code": 200
         },
         {
@@ -2342,7 +2342,7 @@
             "name": "MINUTO PARA GANAR",
             "category": "PLUTO TV - COMPETENCIAS",
             "status": "ONLINE",
-            "latency": "623ms",
+            "latency": "619ms",
             "code": 200
         },
         {
@@ -2350,7 +2350,7 @@
             "name": "WIPE OUT (HOMBRE AL AGUA)",
             "category": "PLUTO TV - COMPETENCIAS",
             "status": "ONLINE",
-            "latency": "808ms",
+            "latency": "1069ms",
             "code": 200
         },
         {
@@ -2358,7 +2358,7 @@
             "name": "DESAFIO SUPER-HUMANOS",
             "category": "PLUTO TV - COMPETENCIAS",
             "status": "ONLINE",
-            "latency": "333ms",
+            "latency": "645ms",
             "code": 200
         },
         {
@@ -2366,7 +2366,7 @@
             "name": "PLUTO.TV DOCUMENTALES",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "626ms",
+            "latency": "870ms",
             "code": 200
         },
         {
@@ -2374,7 +2374,7 @@
             "name": "SHOCKWAVE",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "677ms",
+            "latency": "634ms",
             "code": 200
         },
         {
@@ -2382,7 +2382,7 @@
             "name": "PLUTO.TV NATURALEZA",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "614ms",
+            "latency": "607ms",
             "code": 200
         },
         {
@@ -2390,7 +2390,7 @@
             "name": "MOUSTROS DEL RIO",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "685ms",
+            "latency": "615ms",
             "code": 200
         },
         {
@@ -2398,7 +2398,7 @@
             "name": "CONSTRUCCIONES ASOMBROSAS",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "648ms",
+            "latency": "662ms",
             "code": 200
         },
         {
@@ -2406,7 +2406,7 @@
             "name": "VIDAS EXTREMAS",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "640ms",
+            "latency": "666ms",
             "code": 200
         },
         {
@@ -2414,7 +2414,7 @@
             "name": "NATURETIME",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "644ms",
+            "latency": "705ms",
             "code": 200
         },
         {
@@ -2422,7 +2422,7 @@
             "name": "STINGRAY PAISAJES",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "654ms",
+            "latency": "630ms",
             "code": 200
         },
         {
@@ -2430,7 +2430,7 @@
             "name": "EL ENCANTADOR DE PERROS",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "826ms",
+            "latency": "612ms",
             "code": 200
         },
         {
@@ -2438,7 +2438,7 @@
             "name": "PLUTO.TV AVENTURA",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "337ms",
+            "latency": "379ms",
             "code": 200
         },
         {
@@ -2446,7 +2446,7 @@
             "name": "ICE PILOTS (PILOTOS DEL ARTICO)",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "618ms",
+            "latency": "1068ms",
             "code": 200
         },
         {
@@ -2454,7 +2454,7 @@
             "name": "PLUTO.TV VELOCIDAD",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "625ms",
+            "latency": "654ms",
             "code": 200
         },
         {
@@ -2470,7 +2470,7 @@
             "name": "MI COCHE CL\u00c1SICO",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "1119ms",
+            "latency": "343ms",
             "code": 200
         },
         {
@@ -2478,7 +2478,7 @@
             "name": "MOTORVISION.TV",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "634ms",
+            "latency": "654ms",
             "code": 200
         },
         {
@@ -2486,7 +2486,7 @@
             "name": "PLUTO.TV VIDA REAL",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "620ms",
+            "latency": "767ms",
             "code": 200
         },
         {
@@ -2494,7 +2494,7 @@
             "name": "C.O.P.S.",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "839ms",
+            "latency": "418ms",
             "code": 200
         },
         {
@@ -2502,7 +2502,7 @@
             "name": "DOG EL CAZARRECOMPENSAS",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "652ms",
+            "latency": "621ms",
             "code": 200
         },
         {
@@ -2510,7 +2510,7 @@
             "name": "EMPE\u00d1OS A LO BESTIA",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "929ms",
+            "latency": "599ms",
             "code": 200
         },
         {
@@ -2518,7 +2518,7 @@
             "name": "MI OBSESI\u00d3N FAVORITA",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "679ms",
+            "latency": "620ms",
             "code": 200
         },
         {
@@ -2526,7 +2526,7 @@
             "name": "UNTOLD STORIES OF THE ER",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "626ms",
+            "latency": "649ms",
             "code": 200
         },
         {
@@ -2534,7 +2534,7 @@
             "name": "SALA DE EMERGENCIAS:HISTORIAS INEDITAS",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "622ms",
+            "latency": "687ms",
             "code": 200
         },
         {
@@ -2542,7 +2542,7 @@
             "name": "MISTERIOS MEDICOS",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "337ms",
+            "latency": "607ms",
             "code": 200
         },
         {
@@ -2550,7 +2550,7 @@
             "name": "SMITHSINIAN CHANNEL",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "622ms",
+            "latency": "607ms",
             "code": 200
         },
         {
@@ -2558,7 +2558,7 @@
             "name": "PLUTO.TV HISTORIA",
             "category": "PLUTO TV - CURIOSIDAD ",
             "status": "ONLINE",
-            "latency": "614ms",
+            "latency": "664ms",
             "code": 200
         },
         {
@@ -2566,7 +2566,7 @@
             "name": "PLUTO.TV INVESTIGA",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "339ms",
+            "latency": "607ms",
             "code": 200
         },
         {
@@ -2574,7 +2574,7 @@
             "name": "CAZADOR DE HOMICIDAS",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "612ms",
+            "latency": "690ms",
             "code": 200
         },
         {
@@ -2582,7 +2582,7 @@
             "name": "ZONAINVESTIGACION.TV",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "658ms",
+            "latency": "675ms",
             "code": 200
         },
         {
@@ -2590,7 +2590,7 @@
             "name": "LOS ARCHIVOS DEL F.B.I.",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "623ms",
+            "latency": "587ms",
             "code": 200
         },
         {
@@ -2598,7 +2598,7 @@
             "name": "ARCHIVOS FORENSES",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "784ms",
+            "latency": "603ms",
             "code": 200
         },
         {
@@ -2606,7 +2606,7 @@
             "name": "CRIMEN DE WB",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "654ms",
+            "latency": "635ms",
             "code": 200
         },
         {
@@ -2614,7 +2614,7 @@
             "name": "DR. G",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "336ms",
+            "latency": "626ms",
             "code": 200
         },
         {
@@ -2622,7 +2622,7 @@
             "name": "LOS NUEVOS DETECTIVES",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "792ms",
+            "latency": "1022ms",
             "code": 200
         },
         {
@@ -2630,7 +2630,7 @@
             "name": "MISTERIOS SIN RESOLVER",
             "category": "PLUTO TV INVESTIGACI\u00d3N ",
             "status": "ONLINE",
-            "latency": "880ms",
+            "latency": "603ms",
             "code": 200
         },
         {
@@ -2638,7 +2638,7 @@
             "name": "PLUTO.TV MISTERIOS",
             "category": "PLUTO TV -  ZONA PARANORMAL ",
             "status": "ONLINE",
-            "latency": "592ms",
+            "latency": "811ms",
             "code": 200
         },
         {
@@ -2646,7 +2646,7 @@
             "name": "HISTORIAS DE ULTRATUMBA",
             "category": "PLUTO TV -  ZONA PARANORMAL ",
             "status": "ONLINE",
-            "latency": "742ms",
+            "latency": "642ms",
             "code": 200
         },
         {
@@ -2654,7 +2654,7 @@
             "name": "ARCHIVOS EXTRATERRESTRES",
             "category": "PLUTO TV -  ZONA PARANORMAL ",
             "status": "ONLINE",
-            "latency": "618ms",
+            "latency": "634ms",
             "code": 200
         },
         {
@@ -2662,7 +2662,7 @@
             "name": "CBS NEWS",
             "category": "PLUTO TV NOTICIAS ",
             "status": "ONLINE",
-            "latency": "628ms",
+            "latency": "389ms",
             "code": 200
         },
         {
@@ -2670,7 +2670,7 @@
             "name": "ESTRELLA NEWS",
             "category": "PLUTO TV NOTICIAS ",
             "status": "ONLINE",
-            "latency": "636ms",
+            "latency": "690ms",
             "code": 200
         },
         {
@@ -2678,7 +2678,7 @@
             "name": "EURONEWS",
             "category": "PLUTO TV NOTICIAS ",
             "status": "ONLINE",
-            "latency": "640ms",
+            "latency": "417ms",
             "code": 200
         },
         {
@@ -2686,7 +2686,7 @@
             "name": "RCN NOTICIAS",
             "category": "PLUTO TV NOTICIAS ",
             "status": "ONLINE",
-            "latency": "647ms",
+            "latency": "655ms",
             "code": 200
         },
         {
@@ -2694,7 +2694,7 @@
             "name": "CNN XPRESS",
             "category": "PLUTO TV NOTICIAS ",
             "status": "ONLINE",
-            "latency": "646ms",
+            "latency": "658ms",
             "code": 200
         },
         {
@@ -2702,7 +2702,7 @@
             "name": "TELEFORMULA",
             "category": "PLUTO TV NOTICIAS ",
             "status": "ONLINE",
-            "latency": "636ms",
+            "latency": "615ms",
             "code": 200
         },
         {
@@ -2710,7 +2710,7 @@
             "name": "MILENIO",
             "category": "PLUTO TV NOTICIAS ",
             "status": "ONLINE",
-            "latency": "376ms",
+            "latency": "678ms",
             "code": 200
         },
         {
@@ -2718,7 +2718,7 @@
             "name": "C4 EN ALERTA",
             "category": "PLUTO TV NOTICIAS ",
             "status": "ONLINE",
-            "latency": "641ms",
+            "latency": "626ms",
             "code": 200
         },
         {
@@ -2726,7 +2726,7 @@
             "name": "PLUTO.TV DEPORTES",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "995ms",
+            "latency": "633ms",
             "code": 200
         },
         {
@@ -2734,7 +2734,7 @@
             "name": "CBS SPORTS GOLAZO!",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "644ms",
+            "latency": "834ms",
             "code": 200
         },
         {
@@ -2742,7 +2742,7 @@
             "name": "CBS SPORTS HQ",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "397ms",
+            "latency": "584ms",
             "code": 200
         },
         {
@@ -2750,7 +2750,7 @@
             "name": "TENNIS CHANNEL",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "946ms",
+            "latency": "424ms",
             "code": 200
         },
         {
@@ -2766,7 +2766,7 @@
             "name": "AZTECA DEPORTES",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "374ms",
+            "latency": "681ms",
             "code": 200
         },
         {
@@ -2774,7 +2774,7 @@
             "name": "ITV DEPORTES",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "1239ms",
+            "latency": "616ms",
             "code": 200
         },
         {
@@ -2782,7 +2782,7 @@
             "name": "PLUTO.TV PELEAS",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "551ms",
+            "latency": "587ms",
             "code": 200
         },
         {
@@ -2790,7 +2790,7 @@
             "name": "PFL MMA",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "638ms",
+            "latency": "866ms",
             "code": 200
         },
         {
@@ -2798,7 +2798,7 @@
             "name": "UFC",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "651ms",
+            "latency": "842ms",
             "code": 200
         },
         {
@@ -2806,7 +2806,7 @@
             "name": "FIFA+",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "663ms",
+            "latency": "383ms",
             "code": 200
         },
         {
@@ -2814,7 +2814,7 @@
             "name": "REAL MADRID TV",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "647ms",
+            "latency": "613ms",
             "code": 200
         },
         {
@@ -2822,7 +2822,7 @@
             "name": "TOP BARCA",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "370ms",
+            "latency": "380ms",
             "code": 200
         },
         {
@@ -2830,7 +2830,7 @@
             "name": "RED BULL TV",
             "category": "PLUTO TV DEPORTES ",
             "status": "ONLINE",
-            "latency": "656ms",
+            "latency": "627ms",
             "code": 200
         },
         {
@@ -2838,7 +2838,7 @@
             "name": "DARIA",
             "category": "PLUTO TV - COMEDIA ",
             "status": "ONLINE",
-            "latency": "631ms",
+            "latency": "595ms",
             "code": 200
         },
         {
@@ -2846,7 +2846,7 @@
             "name": "LA FAMILIA DEL BARRIO",
             "category": "PLUTO TV - COMEDIA ",
             "status": "ONLINE",
-            "latency": "629ms",
+            "latency": "644ms",
             "code": 200
         },
         {
@@ -2854,7 +2854,7 @@
             "name": "ENCHUFE.TV",
             "category": "PLUTO TV - COMEDIA ",
             "status": "ONLINE",
-            "latency": "788ms",
+            "latency": "802ms",
             "code": 200
         },
         {
@@ -2862,7 +2862,7 @@
             "name": "PLUTO.TV HUMOR",
             "category": "PLUTO TV - COMEDIA ",
             "status": "ONLINE",
-            "latency": "971ms",
+            "latency": "432ms",
             "code": 200
         },
         {
@@ -2870,7 +2870,7 @@
             "name": "PLUTO.TV COMEDY CENTRAL",
             "category": "PLUTO TV - COMEDIA ",
             "status": "ONLINE",
-            "latency": "625ms",
+            "latency": "595ms",
             "code": 200
         },
         {
@@ -2878,7 +2878,7 @@
             "name": "FAILARMY",
             "category": "PLUTO TV - COMEDIA ",
             "status": "ONLINE",
-            "latency": "650ms",
+            "latency": "632ms",
             "code": 200
         },
         {
@@ -2886,7 +2886,7 @@
             "name": "THE PET COLLECTIVE",
             "category": "PLUTO TV - COMEDIA ",
             "status": "ONLINE",
-            "latency": "670ms",
+            "latency": "683ms",
             "code": 200
         },
         {
@@ -2894,7 +2894,7 @@
             "name": "BROMAS GAGS",
             "category": "PLUTO TV - COMEDIA ",
             "status": "ONLINE",
-            "latency": "351ms",
+            "latency": "400ms",
             "code": 200
         },
         {
@@ -2902,7 +2902,7 @@
             "name": "REVIVE GRAN HERMANO",
             "category": "PLUTO TV - ENTRETENIMIENTO ",
             "status": "ONLINE",
-            "latency": "629ms",
+            "latency": "1083ms",
             "code": 200
         },
         {
@@ -2910,7 +2910,7 @@
             "name": "AZTECA INTERNACIONAL",
             "category": "PLUTO TV - ENTRETENIMIENTO ",
             "status": "ONLINE",
-            "latency": "652ms",
+            "latency": "623ms",
             "code": 200
         },
         {
@@ -2918,7 +2918,7 @@
             "name": "ESTRELLA TV",
             "category": "PLUTO TV - ENTRETENIMIENTO ",
             "status": "ONLINE",
-            "latency": "373ms",
+            "latency": "621ms",
             "code": 200
         },
         {
@@ -2926,7 +2926,7 @@
             "name": "CANAL 6 CDMX",
             "category": "PLUTO TV - ENTRETENIMIENTO ",
             "status": "ONLINE",
-            "latency": "660ms",
+            "latency": "662ms",
             "code": 200
         },
         {
@@ -2934,7 +2934,7 @@
             "name": "CASO CERRADO: CASOS DE LA DRA. POLO",
             "category": "PLUTO TV - ENTRETENIMIENTO ",
             "status": "ONLINE",
-            "latency": "619ms",
+            "latency": "599ms",
             "code": 200
         },
         {
@@ -2942,7 +2942,7 @@
             "name": "CANAL CLAR\u00d3",
             "category": "PLUTO TV - ENTRETENIMIENTO ",
             "status": "ONLINE",
-            "latency": "665ms",
+            "latency": "623ms",
             "code": 200
         },
         {
@@ -2950,7 +2950,7 @@
             "name": "AL RITMO DEL JARIPEO",
             "category": "PLUTO TV - ENTRETENIMIENTO ",
             "status": "ONLINE",
-            "latency": "650ms",
+            "latency": "725ms",
             "code": 200
         },
         {
@@ -2958,7 +2958,7 @@
             "name": "TASTEMADE",
             "category": "PLUTO TV - ESTILO DE VIDA ",
             "status": "ONLINE",
-            "latency": "652ms",
+            "latency": "629ms",
             "code": 200
         },
         {
@@ -2966,7 +2966,7 @@
             "name": "TASTEMADE HOGAR",
             "category": "PLUTO TV - ESTILO DE VIDA ",
             "status": "ONLINE",
-            "latency": "650ms",
+            "latency": "617ms",
             "code": 200
         },
         {
@@ -2974,7 +2974,7 @@
             "name": "TASTEMADE VIAJES",
             "category": "PLUTO TV - ESTILO DE VIDA ",
             "status": "ONLINE",
-            "latency": "652ms",
+            "latency": "641ms",
             "code": 200
         },
         {
@@ -2982,7 +2982,7 @@
             "name": "HOMEFUL",
             "category": "PLUTO TV - ESTILO DE VIDA ",
             "status": "ONLINE",
-            "latency": "647ms",
+            "latency": "388ms",
             "code": 200
         },
         {
@@ -2990,7 +2990,7 @@
             "name": "PLUTO.TV ESTILO DE VIDA x BARBIE",
             "category": "PLUTO TV - ESTILO DE VIDA ",
             "status": "ONLINE",
-            "latency": "334ms",
+            "latency": "651ms",
             "code": 200
         },
         {
@@ -2998,7 +2998,7 @@
             "name": "DULCE BY ELGOURMET",
             "category": "PLUTO TV - ESTILO DE VIDA ",
             "status": "ONLINE",
-            "latency": "373ms",
+            "latency": "619ms",
             "code": 200
         },
         {
@@ -3006,7 +3006,7 @@
             "name": "PLATO DEL DIA BY ELGOURMET",
             "category": "PLUTO TV - ESTILO DE VIDA ",
             "status": "ONLINE",
-            "latency": "667ms",
+            "latency": "641ms",
             "code": 200
         },
         {
@@ -3014,7 +3014,7 @@
             "name": "PLUTO.TV ANIME",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "616ms",
+            "latency": "662ms",
             "code": 200
         },
         {
@@ -3022,7 +3022,7 @@
             "name": "NARUTO 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "634ms",
+            "latency": "590ms",
             "code": 200
         },
         {
@@ -3030,7 +3030,7 @@
             "name": "NARUTO SHIPPUDEN 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "135ms",
+            "latency": "161ms",
             "code": 200
         },
         {
@@ -3038,7 +3038,7 @@
             "name": "BORUTO 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "802ms",
+            "latency": "671ms",
             "code": 200
         },
         {
@@ -3046,7 +3046,7 @@
             "name": "POKEMON 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "136ms",
+            "latency": "179ms",
             "code": 200
         },
         {
@@ -3054,7 +3054,7 @@
             "name": "HUNTER X HUNTER 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "336ms",
+            "latency": "594ms",
             "code": 200
         },
         {
@@ -3062,7 +3062,7 @@
             "name": "DEATH NOTE 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "774ms",
+            "latency": "597ms",
             "code": 200
         },
         {
@@ -3070,7 +3070,7 @@
             "name": "JOJO\u00b4S 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "625ms",
+            "latency": "426ms",
             "code": 200
         },
         {
@@ -3078,7 +3078,7 @@
             "name": "YU-GI-OH 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "636ms",
+            "latency": "623ms",
             "code": 200
         },
         {
@@ -3086,7 +3086,7 @@
             "name": "CAPITAN TSUBASA 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "606ms",
+            "latency": "597ms",
             "code": 200
         },
         {
@@ -3094,7 +3094,7 @@
             "name": "INUYASHA 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "345ms",
+            "latency": "356ms",
             "code": 200
         },
         {
@@ -3102,7 +3102,7 @@
             "name": "ONE PIECE 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "624ms",
+            "latency": "760ms",
             "code": 200
         },
         {
@@ -3110,7 +3110,7 @@
             "name": "TOKUSATO 24/7",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "634ms",
+            "latency": "624ms",
             "code": 200
         },
         {
@@ -3118,7 +3118,7 @@
             "name": "PLUTO.TV E-SPORTS",
             "category": "PLUTO TV - ANIME & GAMMING ",
             "status": "ONLINE",
-            "latency": "622ms",
+            "latency": "608ms",
             "code": 200
         },
         {
@@ -3126,7 +3126,7 @@
             "name": "PLUTO.TV TEENNICK",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "641ms",
+            "latency": "595ms",
             "code": 200
         },
         {
@@ -3134,7 +3134,7 @@
             "name": "PLUTO.TV NICK JR.",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "152ms",
+            "latency": "722ms",
             "code": 200
         },
         {
@@ -3142,7 +3142,7 @@
             "name": "PLUTO.TV NICKREWIND",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "163ms",
+            "latency": "193ms",
             "code": 200
         },
         {
@@ -3150,7 +3150,7 @@
             "name": "PLUTO.TV NICKTOONS",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "153ms",
+            "latency": "432ms",
             "code": 200
         },
         {
@@ -3158,7 +3158,7 @@
             "name": "ICARLY 24/7",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "623ms",
+            "latency": "585ms",
             "code": 200
         },
         {
@@ -3166,7 +3166,7 @@
             "name": "KENAN Y KEL 24/7",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "619ms",
+            "latency": "839ms",
             "code": 200
         },
         {
@@ -3174,7 +3174,7 @@
             "name": "BABY SHARK TV",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "141ms",
+            "latency": "163ms",
             "code": 200
         },
         {
@@ -3182,7 +3182,7 @@
             "name": "BABYFIRST",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "648ms",
+            "latency": "671ms",
             "code": 200
         },
         {
@@ -3190,7 +3190,7 @@
             "name": "PLUTO.TV JUNIOR",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "632ms",
+            "latency": "368ms",
             "code": 200
         },
         {
@@ -3198,7 +3198,7 @@
             "name": "EL REINO INFANTIL",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "672ms",
+            "latency": "604ms",
             "code": 200
         },
         {
@@ -3206,7 +3206,7 @@
             "name": "HEY ARNOLD! 24/7",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "341ms",
+            "latency": "349ms",
             "code": 200
         },
         {
@@ -3214,7 +3214,7 @@
             "name": "AVATAR: LA LEYENDA DE AANG 24/7",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "621ms",
+            "latency": "637ms",
             "code": 200
         },
         {
@@ -3222,7 +3222,7 @@
             "name": "RUGRATS 24/7",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "619ms",
+            "latency": "669ms",
             "code": 200
         },
         {
@@ -3230,7 +3230,7 @@
             "name": "BOB ESPONJA 24/7",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "613ms",
+            "latency": "657ms",
             "code": 200
         },
         {
@@ -3238,7 +3238,7 @@
             "name": "LOS PADRINOS MAGICOS 24/7",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "505ms",
+            "latency": "626ms",
             "code": 200
         },
         {
@@ -3246,7 +3246,7 @@
             "name": "LAS TORTUGAS NINJA 24/7",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "629ms",
+            "latency": "616ms",
             "code": 200
         },
         {
@@ -3254,7 +3254,7 @@
             "name": "PLUTO.TV KIDS",
             "category": "PLUTO TV - NI\u00d1OS Y ADOLECENTES",
             "status": "ONLINE",
-            "latency": "1195ms",
+            "latency": "624ms",
             "code": 200
         },
         {
@@ -3262,7 +3262,7 @@
             "name": "MTV BIGGEST POP",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "876ms",
+            "latency": "617ms",
             "code": 200
         },
         {
@@ -3270,7 +3270,7 @@
             "name": "MTV SPANKIN\u00b4 NEW",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "641ms",
+            "latency": "615ms",
             "code": 200
         },
         {
@@ -3278,7 +3278,7 @@
             "name": "MTV FLOW LATINO",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "722ms",
+            "latency": "616ms",
             "code": 200
         },
         {
@@ -3286,7 +3286,7 @@
             "name": "MTV CLASSICS",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "624ms",
+            "latency": "657ms",
             "code": 200
         },
         {
@@ -3294,7 +3294,7 @@
             "name": "MTV ROCKS",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "625ms",
+            "latency": "380ms",
             "code": 200
         },
         {
@@ -3302,7 +3302,7 @@
             "name": "STINGRAY TIKTOK RADIO",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "646ms",
+            "latency": "716ms",
             "code": 200
         },
         {
@@ -3310,7 +3310,7 @@
             "name": "STINGRAY CONCIERTOS",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "770ms",
+            "latency": "782ms",
             "code": 200
         },
         {
@@ -3318,7 +3318,7 @@
             "name": "STINGRAY KARAOKE",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "685ms",
+            "latency": "737ms",
             "code": 200
         },
         {
@@ -3326,7 +3326,7 @@
             "name": "CONCERT CHANNEL",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "695ms",
+            "latency": "651ms",
             "code": 200
         },
         {
@@ -3350,7 +3350,7 @@
             "name": "XITE 8OS FLASHBACK",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "119ms",
+            "latency": "204ms",
             "code": 200
         },
         {
@@ -3358,7 +3358,7 @@
             "name": "XITE 90S THROWBACK",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "145ms",
+            "latency": "304ms",
             "code": 200
         },
         {
@@ -3366,7 +3366,7 @@
             "name": "XITE CELEBRIDADES",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "135ms",
+            "latency": "250ms",
             "code": 200
         },
         {
@@ -3374,7 +3374,7 @@
             "name": "XITE NUEVO LATINO",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "119ms",
+            "latency": "198ms",
             "code": 200
         },
         {
@@ -3382,7 +3382,7 @@
             "name": "XITE SIEMPRE LATINO",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "110ms",
+            "latency": "200ms",
             "code": 200
         },
         {
@@ -3390,7 +3390,7 @@
             "name": "XITE ROCK ON",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "172ms",
+            "latency": "192ms",
             "code": 200
         },
         {
@@ -3398,7 +3398,7 @@
             "name": "XITE JUST CHILL",
             "category": "PLUTO TV M\u00daSICA ",
             "status": "ONLINE",
-            "latency": "111ms",
+            "latency": "178ms",
             "code": 200
         },
         {
