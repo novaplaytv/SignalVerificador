@@ -6,7 +6,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novaplay | Verificador de Señal</title>
+    <title>Novaplay | Verificador de SeÃ±al</title>
     <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/novaplaytv/novaimg/main/novasplash.webp">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
         .btn-login-nav:hover { transform: scale(1.05); }
         .btn-logout { background: #222; }
 
-        /* Dropdown de Administración Premium - FIX DEFINITIVO */
+        /* Dropdown de AdministraciÃ³n Premium - FIX DEFINITIVO */
         .admin-menu { position: relative; display: none; align-items: center; padding: 10px 0; margin: -10px 0; }
         .btn-admin { background: #fff; color: #000; font-weight: 900; border: none; cursor: pointer; padding: 10px 20px; border-radius: 12px; font-size: 13px; display: flex; align-items: center; gap: 10px; transition: 0.2s; position: relative; z-index: 10002; }
         .btn-admin:hover { background: var(--primary); color: #fff; box-shadow: 0 0 20px rgba(229,9,20,0.4); }
@@ -116,7 +116,7 @@
             .nav-links.active { right: 0; }
             .nav-links a { font-size: 18px; width: 100%; text-align: center; padding: 15px; border-radius: 15px; }
 
-            /* Ajuste del botón PANEL en móvil */
+            /* Ajuste del botÃ³n PANEL en mÃ³vil */
             .admin-menu { width: 100%; height: auto; justify-content: center; padding: 0; flex-direction: column; }
             .admin-menu.active .dropdown-content { opacity: 1; visibility: visible; display: flex; }
             .btn-admin { width: 100%; justify-content: center; padding: 18px; font-size: 16px; border-radius: 15px; }
@@ -148,7 +148,7 @@
             Novaplay | Verificador
         </a>
 
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menÃº">
             <span></span>
             <span></span>
             <span></span>
@@ -163,10 +163,10 @@
                     <a href="https://novaplaytv.github.io/Dashboard/"><i class="fas fa-chart-line"></i> Dashboard Central</a>
                     <a href="https://novaplaytv.github.io/panel-canales/"><i class="fas fa-tv"></i> Admin. Canales</a>
                     <a href="https://novaplaytv.github.io/NovaSecurity/"><i class="fas fa-shield-alt"></i> NovaSecurity</a>
-                    <a href="https://novaplaytv.github.io/SignalVerificador/"><i class="fas fa-broadcast-tower"></i> Verificador de Señal</a>
-                    <a href="https://novaplaytv.github.io/novaimg/actualizar-icono/"><i class="fas fa-icons"></i> Gestión de Iconos</a>
+                    <a href="https://novaplaytv.github.io/SignalVerificador/"><i class="fas fa-broadcast-tower"></i> Verificador de SeÃ±al</a>
+                    <a href="https://novaplaytv.github.io/novaimg/actualizar-icono/"><i class="fas fa-icons"></i> GestiÃ³n de Iconos</a>
                     <a href="https://novaplaytv.github.io/novaimg/generador/"><i class="fas fa-magic"></i> Icon Studio</a>
-                    <a href="#" onclick="cerrarSesion(); return false;" class="logout-link"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    <a href="#" onclick="cerrarSesion(); return false;" class="logout-link"><i class="fas fa-sign-out-alt"></i> Cerrar SesiÃ³n</a>
                 </div>
             </div>
         </div>
@@ -197,8 +197,8 @@
             <input type="text" id="username" placeholder="Usuario Staff">
         </div>
         <div class="form-group-auth">
-            <label>Contraseña</label>
-            <input type="password" id="password" placeholder="••••••••">
+            <label>ContraseÃ±a</label>
+            <input type="password" id="password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
         </div>
         <button class="btn-login-nav" style="width:100%; justify-content:center; padding: 18px; border-radius: 14px; font-weight: 900;" onclick="iniciarSesion()">ENTRAR AL VERIFICADOR</button>
         <div id="loginStatus" class="status"></div>
@@ -207,7 +207,7 @@
 
 <main>
     <div class="header">
-        <h1>Búnker de Monitoreo</h1>
+        <h1>BÃºnker de Monitoreo</h1>
         <div class="update-tag" id="lastUpdate">Sincronizando estado...</div>
     </div>
     <div class="grid" id="mainGrid"></div>
@@ -215,8 +215,8 @@
 
 <footer>
     <div class="footer-text">
-        © 2026 NOVAPLAY TV<br>
-        © 2010 - 2026 - NOVAPLAY TV. TODOS LOS DERECHOS RESERVADOS
+        Â© 2026 NOVAPLAY TV<br>
+        Â© 2010 - 2026 - NOVAPLAY TV. TODOS LOS DERECHOS RESERVADOS
     </div>
 </footer>
 
@@ -246,7 +246,7 @@
             const res = await fetch('status.json?t=' + Date.now()).then(r => r.json());
             allSignals = res.results;
             const lastUpdateEl = document.getElementById('lastUpdate');
-            if(lastUpdateEl) lastUpdateEl.innerText = "Última Verificación: " + res.last_update;
+            if(lastUpdateEl) lastUpdateEl.innerText = "Ãšltima VerificaciÃ³n: " + res.last_update;
             render();
         } catch (e) {
             const gridEl = document.getElementById('mainGrid');
@@ -304,7 +304,7 @@
     async function setManual(id, status) {
         openModal(
             status ? "Forzar Online" : "Quitar Forzado",
-            status ? "¿Marcar este canal como ONLINE manualmente?" : "¿Restablecer verificación automática?",
+            status ? "Â¿Marcar este canal como ONLINE manualmente?" : "Â¿Restablecer verificaciÃ³n automÃ¡tica?",
             async () => {
                 const res = await req({
                     action: "seguridad_set_manual_signal",
@@ -316,7 +316,7 @@
                 if (res.success) {
                     location.reload();
                 } else {
-                    openModal("Error", "Fallo al guardar: " + (res.error || "Acción no permitida"), () => {});
+                    openModal("Error", "Fallo al guardar: " + (res.error || "AcciÃ³n no permitida"), () => {});
                 }
             }
         );
@@ -326,7 +326,7 @@
         document.getElementById('auth-view').style.display = 'flex';
     }
 
-    // Toggle Menú Móvil
+    // Toggle MenÃº MÃ³vil
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     const adminMenu = document.getElementById('adminMenu');
@@ -339,7 +339,7 @@
         });
     }
 
-    // Toggle Dropdown en Móvil
+    // Toggle Dropdown en MÃ³vil
     if (btnAdmin) {
         btnAdmin.addEventListener('click', (e) => {
             if (window.innerWidth <= 900) {
@@ -349,7 +349,7 @@
         });
     }
 
-    // Cerrar menú al clickear link (móvil)
+    // Cerrar menÃº al clickear link (mÃ³vil)
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             if (navToggle) navToggle.classList.remove('active');
@@ -380,7 +380,7 @@
     }
 
     function cerrarSesion() {
-        openModal("Cerrar Sesión", "¿Estás seguro que deseas salir del Verificador?", () => {
+        openModal("Cerrar SesiÃ³n", "Â¿EstÃ¡s seguro que deseas salir del Verificador?", () => {
             localStorage.removeItem("novaplay_session_token");
             location.reload();
         });
